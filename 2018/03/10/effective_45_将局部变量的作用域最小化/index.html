@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-effective_45_将局部变量的作用域最小化 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="effective_45_将局部变量的作用域最小化">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+
+
+<li><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" >2018寄语</a></li>
+
+<!--
+
+        <li><a href="/">首页</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/日进一步" data-name="学习">学习</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/诗词" data-name="诗词">诗词</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/base" data-name="基础">基础</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/algorithm" data-name="算法">算法</a>
+                </li>
+            
+        
+         <li >
+
+
+-->
+            <!--
+                    <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            -->
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+
+<script type="text/javascript">
+     
+</script>
+
+
+<div class="main-inner">
+    <article class="post animated slideInRight" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="http://xiaohuozi51.coding.me/" target="_blank">
+                    <img width="48" src="/images/avatar.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span >正</span>
+                   <!-- <a href="" target="_blank">正</a> -->
+                </p>
+                <p>不关注架构设计细节的程序员不是一个好架构师</p>
+            </div>
+            <h2 class="post-title">effective_45_将局部变量的作用域最小化</h2>
+            <div class="post-meta">
+             共<span style='color:blue'>1511</span>字 | 阅读<span id="busuanzi_value_page_pv" style='color:red'><i class="fa fa-spinner fa-spin"></i></span>次 | 创建于:<span title="最后编辑于2018/0310">2018/0310</span>
+            
+          
+
+                     <a href="/categories" target="_blank"><i class="fa fa-book"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_blank">java</a>
+              
+              <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_blank">Effective_Java</a>
+            
+            
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true"title="代码"  style="font-size:22px;color:blue;"></div>
+            
+
+
+            </div>
+           
+        </div>
+         <!--
+        
+            <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+            
+         -->
+        
+                <p style='text-align:center;color:red;font-weight:bold;'>站点微信订阅号zhengjinyibu,欢迎大家搜索关注.</p>
+        
+        
+        
+        
+
+    
+        <div class="post-content markdown-body">
+            <p><a href="http://blog.csdn.net/zhtzyh2012/article/details/46675065" target="_blank" rel="noopener">http://blog.csdn.net/zhtzyh2012/article/details/46675065</a></p>
+<blockquote>
+<p>循环提供特殊机会将变量作用域最小化.(无论传统for,还foreach).for循环,都允许声明循环变量,它们的作用域被限定在正好的作用范围之内.(范围包括循环体,以及循环体之前的初始化,测试,更新).如果循环终止之后不再需要循环变量内容,for循环优于while循环.<br>几乎每个局部变量的声明都应该包含一个初始化表达式.如果没有足够信息来对一个变量进行有意义的初始化,就应该推迟这个声明,直到可以初始化为止.例外情况是与try..catch有关.<br>for循环比while循环另外优势:更简短,增加可读性.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">              Class&lt;?&gt;cl = <span class="keyword">null</span>;</span><br><span class="line">              <span class="keyword">try</span>&#123;</span><br><span class="line">                     cl= Class.forName(args[<span class="number">0</span>]);</span><br><span class="line">              &#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">                     System.err.println(<span class="string">"Classnot find"</span>);</span><br><span class="line">                     System.exit(<span class="number">1</span>);</span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> book.effectiveJava;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将局部变量作用域最小化</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">e_45MinimizeVariableScope</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		List&lt;String&gt;  t1=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		t1.add(<span class="string">"1"</span>);</span><br><span class="line">		t1.add(<span class="string">"2"</span>);</span><br><span class="line">		t1.add(<span class="string">"3"</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//str 的访问仅限于大括号内部</span></span><br><span class="line">		<span class="keyword">for</span>(String str : t1)&#123;</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//这种方式比</span></span><br><span class="line">		<span class="keyword">for</span>(Iterator&lt;String&gt; stringIterator = t1.iterator();stringIterator.hasNext();)&#123;</span><br><span class="line">			String str = stringIterator.next();</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Iterator&lt;String&gt; stringIterator=t1.iterator();</span><br><span class="line">		<span class="keyword">while</span>(stringIterator.hasNext())&#123;</span><br><span class="line">			System.out.println(stringIterator.next());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.println(<span class="string">"继续访问stringIterator:"</span>+ stringIterator);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+         
+    <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+    
+      <!--
+        <div class="post-tool">
+        
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            
+        
+        </div>
+          -->
+          <div class="aligncenter">
+                
+                    <div class="post-tags">Tags：
+                        
+                        <a href="/tags/Effective-Java/">Effective_Java</a>
+                        
+                    </div>
+                
+          </div>
+
+         
+
+<div>
+ <br/>
+ 
+         <div class=" post-tags" style="float:left;font-size:15px;">
+                <a   href="/2018/03/10/effective_46_foreach循环优先于传统的for循环/" title="effective_46_foreach循环优先于传统的for循环">
+                           <i class="fa fa-chevron-left"></i>  <em>·</em> effective_46_foreach循环优先于传统的for循环
+                </a>
+         </div>
+ 
+        
+            <div class=" post-tags" style="float:right;font-size:15px;">
+                    <a class=" post-tags" style="float:right" href="/2018/03/07/VueJs自定义指令/" title="VueJs自定义指令">
+                        VueJs自定义指令  <em>·</em> <i class="fa fa-chevron-right"></i>
+                    </a>
+            </div>
+        
+
+</div>
+
+    </article>
+
+
+    
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div style="float:right;">
+   <i class="fa fa-question" aria-hidden="true"></i>
+   <span style='color:red;font-weight:bold;'>评论加载延迟属正常现象</span>
+</div>
+
+<div id="gitment-container"></div>
+<script type="text/javascript">
+    var gitment = new Gitment({
+        id: document.location.href,
+        owner: 'hotbain',
+        repo: 'day2up_comments',
+        oauth: {
+            client_id: 'c36e8df7a6f947e8e429',
+            client_secret: '1bd8694231b9c7f324d06d850415749253f6704f',
+        }
+    });
+    gitment.render('gitment-container');
+</script>
+
+
+</div>
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

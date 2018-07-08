@@ -1,0 +1,803 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-分类 - 方法论 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+         <li class="active"><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" " title="2018寄语">2018寄语</a></li>
+
+       <!--
+ 
+        <li class="">
+            <a href="/categories/日进一步" data-name="学习">学习</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/诗词" data-name="诗词">诗词</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/base" data-name="基础">基础</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/algorithm" data-name="算法">算法</a>
+        </li>
+        
+       -->
+         
+          <!--
+          <li >
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+             </li>
+          -->
+       
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/11/软件开发之技能梳理/" target="_blank" title="软件开发之技能梳理"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/11/软件开发之技能梳理/" target="_self" title="软件开发之技能梳理">软件开发之技能梳理</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0311</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     软件开发之技能梳理
+       <!-- 软件开发之技能梳理 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="https://mp.weixin.qq.com/s/aM03vvSpDpvwOdaJ8u3Zgw" target="_blank" title="一个故事讲明白 ThreadLocal">一个故事讲明白 ThreadLocal</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0311</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="https://mp.weixin.qq.com/s/aM03vvSpDpvwOdaJ8u3Zgw" target="_blank" title="一个故事讲明白 ThreadLocal">https://mp.weixin.qq.com/s/aM03vvSpDpvwOdaJ8u3Zgw</a>
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>可是我不明白的是为什么那个数据结构是个map 呢？ : 允许将多个线程变量放到map中.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ThreadLocal&lt;String&gt; threadLocalA= <span class="keyword">new</span> ThreadLocal&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">线程<span class="number">1</span>： threadLocalA.set(<span class="string">"1234"</span>);</span><br><span class="line">线程<span class="number">2</span>： threadLocalA.set(<span class="string">"5678"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//------------</span></span><br><span class="line">ThreadLocal&lt;Integer&gt; threadLocalB = <span class="keyword">new</span> ThreadLocal&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">线程<span class="number">1</span>： threadLocalB.set(<span class="number">30</span>);</span><br><span class="line">线程<span class="number">2</span>： threadLocalB.set(<span class="number">40</span>);</span><br></pre></td></tr></table></figure>
+       <!-- 一个故事讲明白 ThreadLocal -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="https://mp.weixin.qq.com/s/X8mQCugBAKWx5rsnF--9XA" target="_blank" title="CPU说：这个世界慢死了">CPU说：这个世界慢死了</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0212</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="https://mp.weixin.qq.com/s/X8mQCugBAKWx5rsnF--9XA" target="_blank" title="CPU说：这个世界慢死了">https://mp.weixin.qq.com/s/X8mQCugBAKWx5rsnF--9XA</a>
+             
+             
+        
+         
+
+
+     <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>减少 跨网络数据访问<br>减少系统调用<br>减少上下文切换<br>减少互斥锁的征用.</p>
+</blockquote>
+<blockquote>
+<p>利用一级和二级缓存</p>
+</blockquote>
+<p>引用自微信: <a href="https://mp.weixin.qq.com/s/X8mQCugBAKWx5rsnF--9XA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/X8mQCugBAKWx5rsnF--9XA</a></p>
+       <!-- CPU说：这个世界慢死了 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="https://mp.weixin.qq.com/s/TrYX2SC8Z2pfWdP9d5LSjw" target="_blank" title="工作能力出众要做的五件事">工作能力出众要做的五件事</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0211</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="https://mp.weixin.qq.com/s/TrYX2SC8Z2pfWdP9d5LSjw" target="_blank" title="工作能力出众要做的五件事">https://mp.weixin.qq.com/s/TrYX2SC8Z2pfWdP9d5LSjw</a>
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>所谓工作能力出众，其实就是这五件事！</p>
+</blockquote>
+<iframe src="https://www.processon.com/embed/mind/5a7feeb3e4b0615ac056387a" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+       <!-- 工作能力出众要做的五件事 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/03/微服务发布模型/" target="_blank" title="微服务发布模型"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/03/微服务发布模型/" target="_self" title="微服务发布模型">微服务发布模型</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0203</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<ul>
+<li>滚动发布 部分发布</li>
+<li>蓝绿发布 全部发布，但是新老版本共存</li>
+<li>金丝雀发布/灰度发布</li>
+</ul>
+</blockquote>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><blockquote>
+<p>矿井中的金丝雀 17世纪，英国矿井工人发现，金丝雀对瓦斯这种气体十分敏感。空气中哪怕有极其微量的瓦斯，金丝雀也会停止歌唱；而当瓦斯含量超过一定限度时，虽然鲁钝的人类毫无察觉，金丝雀却早已毒发身亡。当时在采矿设备相对简陋的条件下，工人们每次下井都会带上一只金丝雀作为“瓦斯检测指标”，以便在危险状况下紧急撤离。</p>
+</blockquote>
+<iframe src="https://www.processon.com/embed/mind/5a753975e4b024b99bed9273" width="100%" height="900px" frameborder="0" allowfullscreen></iframe>
+       <!-- 微服务发布模型 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/26/测试环境分支管理/" target="_blank" title="测试环境分支管理"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/26/测试环境分支管理/" target="_self" title="测试环境分支管理">测试环境分支管理</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0126</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/git/" target="_self">git</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <iframe src="https://www.processon.com/embed/5a69d4eee4b06708c4090b1e" width="100%" height="800px" frameborder="0" allowfullscreen></iframe>
+       <!-- 测试环境分支管理 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/05/架构师是个啥/" target="_blank" title="架构师是个啥?"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/05/架构师是个啥/" target="_self" title="架构师是个啥?">架构师是个啥?</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0105</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/导图/" target="_self">导图</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p><strong>架构师分类与怎样成为架构师?</strong></p>
+</blockquote>
+<iframe src="https://www.processon.com/embed/mind/5a4f89cde4b0c090522b848f" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+<blockquote>
+<p><strong>应用架构师责任范围在哪里?</strong></p>
+</blockquote>
+<iframe src="https://www.processon.com/embed/5a4f84dbe4b0c090522b7d83" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+<blockquote>
+<p><strong>架构师的工作内容</strong></p>
+</blockquote>
+<iframe src="https://www.processon.com/embed/mind/5a4f88f2e4b0c090522b835a" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+       <!-- 架构师是个啥? -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/25/五年程序员该思考的那点事儿/" target="_blank" title="五年程序员该思考的那点事儿"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/25/五年程序员该思考的那点事儿/" target="_self" title="五年程序员该思考的那点事儿">五年程序员该思考的那点事儿</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1225</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="无思考-则行尸走肉"><a href="#无思考-则行尸走肉" class="headerlink" title="无思考,则行尸走肉"></a>无思考,则行尸走肉</h3><hr>
+<blockquote>
+<ul>
+<li>技术方案的思考</li>
+<li><strong><code>稀缺性是自己战胜别人的法宝</code></strong></li>
+<li>借鉴来的也是方案.</li>
+<li>各种方案的优劣</li>
+<li><strong><code>好的方案能够说服任何人</code></strong>.
+       <!-- 五年程序员该思考的那点事儿 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/23/什么是深度工作/" target="_blank" title="什么是深度工作?"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/23/什么是深度工作/" target="_self" title="什么是深度工作?">什么是深度工作?</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1223</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_self">方法论</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_self">方法论</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>Tips<br>深度工作（Deep Work）：在无干扰的状态下专注进行职业活动，使个人的认知能力达到极限。这种努力能够创造新价值，提升技能，而且难以复制。</p>
+</blockquote>
+<blockquote>
+<p>Tips<br>肤浅工作（Shallow Work）：对认知要求不高的事务性任务，往往在受到干扰的情况下开展。此类工作通常不会为世界创造太多新价值，且容易复制。</p>
+</blockquote>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>深度工作就是减少干扰的保持专注的过程，减少不必要的社交，电子设备的不必要的干扰。避免被频繁打断，没有成果的肤浅工作。</p>
+<h4 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做?"></a>怎么做?</h4><blockquote>
+<p><strong>不要用网络来消遣，尽量远离网络媒体，对别人来说，你没有你自己想象得那么重要。</strong></p>
+</blockquote>
+<blockquote>
+<p>为了达到深度工作，你可以找个没有人打扰的房间，偶尔玩消失。</p>
+</blockquote>
+<blockquote>
+<p>给自己独处的时间。在长时间无干扰的情况下，批量解决困难却重要的智力工作。</p>
+</blockquote>
+<blockquote>
+<p> 保持一次只专注一件事，不要让自己多任务工作。减少参加不必要的会议。</p>
+</blockquote>
+<blockquote>
+<p>再是劳逸结合，保持充足的睡眠，散步是不错的休息方式。</p>
+</blockquote>
+<blockquote>
+<p>不必时刻查看邮件等，有些邮件也不是立即必须回复的。</p>
+</blockquote>
+<blockquote>
+<p>再是，做什么事情都要设置截至日期（Deadline），让自己保持一种紧迫感。</p>
+</blockquote>
+<blockquote>
+<p>深度工作，投入可观的精力或金钱，也是值得的。</p>
+</blockquote>
+       <!-- 什么是深度工作? -->
+    </div>
+
+</article>
+
+
+
+    
+</div>
+<!-- 分页开始 -->
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

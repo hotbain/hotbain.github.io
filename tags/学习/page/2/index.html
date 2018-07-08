@@ -1,0 +1,1258 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-标签 - 学习 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+         <li class="active"><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" " title="2018寄语">2018寄语</a></li>
+
+       <!--
+ 
+        <li class="">
+            <a href="/categories/日进一步" data-name="学习">学习</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/诗词" data-name="诗词">诗词</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/base" data-name="基础">基础</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/algorithm" data-name="算法">算法</a>
+        </li>
+        
+       -->
+         
+          <!--
+          <li >
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+             </li>
+          -->
+       
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/06/Redis在秒杀场景中的应用_限流_库存扣减_异步下单/" target="_blank" title="Redis在秒杀场景中的应用_限流_库存扣减_异步下单"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/06/Redis在秒杀场景中的应用_限流_库存扣减_异步下单/" target="_self" title="Redis在秒杀场景中的应用_限流_库存扣减_异步下单">Redis在秒杀场景中的应用_限流_库存扣减_异步下单</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1206</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/nosql/" target="_self">nosql</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用自:<a href="http://geek.csdn.net/news/detail/246932" target="_blank" rel="noopener">http://geek.csdn.net/news/detail/246932</a><br>Redis作用: <strong><em>限流<em>库存扣减</em>异步下单</em></strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"goodsId" : &#123;</span><br><span class="line">    "Total": 100</span><br><span class="line">    "Booked": 100</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> n = <span class="built_in">tonumber</span>(ARGV[<span class="number">1</span>])</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> n  <span class="keyword">or</span> n == <span class="number">0</span> <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>       </span><br><span class="line"><span class="keyword">end</span>                </span><br><span class="line"><span class="keyword">local</span> vals = redis.call(<span class="string">"HMGET"</span>, KEYS[<span class="number">1</span>], <span class="string">"Total"</span>, <span class="string">"Booked"</span>);</span><br><span class="line"><span class="keyword">local</span> total = <span class="built_in">tonumber</span>(vals[<span class="number">1</span>])</span><br><span class="line"><span class="keyword">local</span> blocked = <span class="built_in">tonumber</span>(vals[<span class="number">2</span>])</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> total <span class="keyword">or</span> <span class="keyword">not</span> blocked <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>       </span><br><span class="line"><span class="keyword">end</span>                </span><br><span class="line"><span class="keyword">if</span> blocked + n &lt;= total <span class="keyword">then</span></span><br><span class="line">    redis.call(<span class="string">"HINCRBY"</span>, KEYS[<span class="number">1</span>], <span class="string">"Booked"</span>, n)                                   </span><br><span class="line">    <span class="keyword">return</span> n;   </span><br><span class="line"><span class="keyword">end</span>                </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+       <!-- Redis在秒杀场景中的应用_限流_库存扣减_异步下单 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/06/支付宝防并发方案之一锁二判三更新/" target="_blank" title="支付宝防并发方案之一锁二判三更新"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/06/支付宝防并发方案之一锁二判三更新/" target="_self" title="支付宝防并发方案之一锁二判三更新">支付宝防并发方案之一锁二判三更新</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1206</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用自:<a href="http://www.jianshu.com/p/fdde21b89924" target="_blank" rel="noopener">http://www.jianshu.com/p/fdde21b89924</a><br><img src="http://img.blog.csdn.net/20171206140625645?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第1步锁当前支付单</span></span><br><span class="line">PaymentInfo resultPaymentInfo = commonPayCoreService</span><br><span class="line">  .queryPaymentForUpdate(createPaymentInfo.getId());</span><br><span class="line"><span class="keyword">if</span> (resultPaymentInfo.isFinalStatus()) &#123;</span><br><span class="line">      <span class="comment">//第2步，判断当前支付单状态，如果是终态，则直接返回</span></span><br><span class="line">       <span class="comment">//不做任何更新</span></span><br><span class="line">      <span class="keyword">return</span> resultPaymentInfo;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//第3步更新当前支付单状态到终态，并完成相关业务逻辑(支付成功)</span></span><br><span class="line"> payCoreService.updateRequestResult(payChannelResult);</span><br></pre></td></tr></table></figure></p>
+       <!-- 支付宝防并发方案之一锁二判三更新 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/05/Group_By和Having_Where_Order_by语句的执行顺序/" target="_blank" title="Group_By和Having_Where_Order_by语句的执行顺序"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/05/Group_By和Having_Where_Order_by语句的执行顺序/" target="_self" title="Group_By和Having_Where_Order_by语句的执行顺序">Group_By和Having_Where_Order_by语句的执行顺序</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1205</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/sql/" target="_self">sql</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>Group By 和 Having, Where ,Order by这些关键字是按照如下顺序进行执行的：<strong>Where, Group By, Having, Order by</strong>。</p>
+</blockquote>
+<blockquote>
+<p>首先where将最原始记录中不满足条件的记录删除(所以应该在where语句中尽量的将不符合条件的记录筛选掉，这样可以减少分组的次数),</p>
+<p>然后通过Group By关键字后面指定的分组条件将筛选得到的视图进行分组<br>接着系统<code>根据Having关键字后面指定的筛选条件，将分组视图后不满足条件的记录筛选掉</code>,最后按照Order By语句对视图进行排序，这样最终的结果就产生了。<br>在这四个关键字中，<code>只有在Order By语句中才可以使用最终视图的列名</code><br>
+       <!-- Group By和Having,Where,Order by语句的执行顺序 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/02/素数检测_最low的方法/" target="_blank" title="素数检测_最low的方法"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="http://blog.csdn.net/tongyongzh/article/details/6693409" target="_blank" title="素数检测_最low的方法">素数检测_最low的方法</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1202</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/algorithm/" target="_self">algorithm</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/算法/" target="_self">算法</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="http://blog.csdn.net/tongyongzh/article/details/6693409" target="_blank" title="素数检测_最low的方法">http://blog.csdn.net/tongyongzh/article/details/6693409</a>
+             
+             
+        
+         
+
+
+     <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> i=<span class="number">2</span>;</span><br><span class="line">       <span class="keyword">for</span> (;i&lt;=<span class="number">1000</span>;i++)&#123;</span><br><span class="line">           <span class="keyword">boolean</span> prime= <span class="keyword">true</span>;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;=i;j++)&#123;</span><br><span class="line">               <span class="keyword">if</span>(i!=j&amp;&amp; i%j==<span class="number">0</span>)&#123;</span><br><span class="line">                   prime=<span class="keyword">false</span>;</span><br><span class="line">                   <span class="keyword">break</span>;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span>(prime)&#123;</span><br><span class="line">               System.out.println(i);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+       <!-- 素数检测_最low的方法 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/02/Redis分布式锁的正确实现方式Java/" target="_blank" title="Redis分布式锁的正确实现方式Java"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/02/Redis分布式锁的正确实现方式Java/" target="_self" title="Redis分布式锁的正确实现方式Java">Redis分布式锁的正确实现方式Java</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1202</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/nosql/" target="_self">nosql</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>来自:<a href="https://mp.weixin.qq.com/s/qJK61ew0kCExvXrqb7-RSg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/qJK61ew0kCExvXrqb7-RSg</a></p>
+<blockquote>
+<p>互斥性。在任意时刻，只有一个客户端能持有锁。<br>不会发生死锁。即使有一个客户端在持有锁的期间崩溃而没有主动解锁，也能保证后续其他客户端能加锁。<br>具有容错性。只要大部分的Redis节点正常运行，客户端就可以加锁和解锁。<br>解铃还须系铃人。加锁和解锁必须是同一个客户端，客户端自己不能把别人加的锁给解了。<br>
+       <!-- Redis分布式锁的正确实现方式Java -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/02/程序员进阶乐观锁与悲观锁/" target="_blank" title="程序员进阶乐观锁与悲观锁"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="https://www.toutiao.com/a6491604587517051406/" target="_blank" title="程序员进阶乐观锁与悲观锁">程序员进阶乐观锁与悲观锁</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1202</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="https://www.toutiao.com/a6491604587517051406/" target="_blank" title="程序员进阶乐观锁与悲观锁">https://www.toutiao.com/a6491604587517051406/</a>
+             
+             
+        
+         
+
+
+     <h3 id="乐观锁"><a href="#乐观锁" class="headerlink" title="乐观锁"></a>乐观锁</h3><p>乐观锁：顾名思义总是乐观的认为这个数据没有在同一时间被其他人操作变更<br>实现：CAS(compare and set)<br>优点：吞吐量高，适用于数据冲突相对较少的场景<br>缺点：受限于外部系统，可能会引起脏读，且在数据冲突很大的场景下，性能反而可能更低</p>
+<p>内存实现CAS/ABA/AtomicStampedReference/;  数据库乐观锁实现:update goods set num= newnum, version = oldversion+1 where version = oldversion;</p>
+<h3 id="悲观锁"><a href="#悲观锁" class="headerlink" title="悲观锁:"></a>悲观锁:</h3><p>内存:lock,syncrhoized是一种独占锁.<br>数据库: select…for update;但是: select…for update不会阻塞select的查询。<br>
+       <!-- 程序员进阶乐观锁与悲观锁 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="http://blog.csdn.net/qq_37267015/article/details/78676305" target="_blank" title="8张图理解Java">8张图理解Java</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1130</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="http://blog.csdn.net/qq_37267015/article/details/78676305" target="_blank" title="8张图理解Java">http://blog.csdn.net/qq_37267015/article/details/78676305</a>
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>如果两个对象的哈希值相同，但他们未必相等(equal)。<br>如果两个对象相等(equal)，那么他们一定有相同的哈希值。</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20171130233900270?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="8张图理解Java"></p>
+       <!-- 8张图理解Java -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/29/Sql优化1129/" target="_blank" title="Sql优化1129"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/29/Sql优化1129/" target="_self" title="Sql优化1129">Sql优化1129</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1129</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p><img src="http://img.blog.csdn.net/20171129224850632?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>
+       <!-- Sql优化1129 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/28/Fork_Join在分配任务时,不是很合理_Why/" target="_blank" title="Fork_Join在分配任务是不均衡的_Why"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/28/Fork_Join在分配任务时,不是很合理_Why/" target="_self" title="Fork_Join在分配任务是不均衡的_Why">Fork_Join在分配任务是不均衡的_Why</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1128</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-github"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p><a href="http://www.javacreed.com/java-fork-join-example/" target="_blank" rel="noopener">http://www.javacreed.com/java-fork-join-example/</a></p>
+       <!-- Fork_Join在分配任务是不均衡的_Why -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/28/如何排查服务可用性问题/" target="_blank" title="如何排查服务可用性问题"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="https://mp.weixin.qq.com/s/Cc7BU30wb2e85GpcfXHYNA" target="_blank" title="如何排查服务可用性问题">如何排查服务可用性问题</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1128</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="https://mp.weixin.qq.com/s/Cc7BU30wb2e85GpcfXHYNA" target="_blank" title="如何排查服务可用性问题">https://mp.weixin.qq.com/s/Cc7BU30wb2e85GpcfXHYNA</a>
+             
+             
+        
+         
+
+
+     <p>微信好文,值得一看!!!<br>
+       <!-- 如何排查服务可用性问题 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/27/事件驱动一致性方案研究_Nginx/" target="_blank" title="事件驱动一致性方案研究_Nginx"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/27/事件驱动一致性方案研究_Nginx/" target="_self" title="事件驱动一致性方案研究_Nginx">事件驱动一致性方案研究_Nginx</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1127</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>[TOC]</p>
+<h3 id="事务日志挖掘"><a href="#事务日志挖掘" class="headerlink" title="事务日志挖掘:"></a>事务日志挖掘:</h3><p><img src="http://img.blog.csdn.net/20171127195905496?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>
+       <!-- 事件驱动一致性方案研究_Nginx -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/27/20171127日进一步_单例模式双重校验_Volatile校验必要性/" target="_blank" title="20171127日进一步_单例模式双重校验_Volatile校验必要性"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/27/20171127日进一步_单例模式双重校验_Volatile校验必要性/" target="_self" title="20171127日进一步_单例模式双重校验_Volatile校验必要性">20171127日进一步_单例模式双重校验_Volatile校验必要性</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1127</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p><strong>volatile关键字不但可以防止指令重排，也可以保证线程访问的变量值是主内存中的最新值</strong></p>
+</blockquote>
+       <!-- 讲幂等的设计,好文哦!!! -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/25/DHCP协议实现细节摘抄/" target="_blank" title="20171125日进一步_DHCP协议实现细节摘抄"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/25/DHCP协议实现细节摘抄/" target="_self" title="20171125日进一步_DHCP协议实现细节摘抄">20171125日进一步_DHCP协议实现细节摘抄</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1125</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/base/" target="_self">base</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="20171125日进一步-DHCP协议实现细节摘抄"><a href="#20171125日进一步-DHCP协议实现细节摘抄" class="headerlink" title="20171125日进一步_DHCP协议实现细节摘抄"></a>20171125日进一步_DHCP协议实现细节摘抄</h3><p><img src="http://img.blog.csdn.net/20171125223541314?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>
+       <!-- DHCP协议实现细节 tcp协议摘抄 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/25/使用Markdown编辑器写博客/" target="_blank" title="使用Markdown编辑器写博客"
+           style="background-image:url(/images/rssFeed-bg.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/25/使用Markdown编辑器写博客/" target="_self" title="使用Markdown编辑器写博客">使用Markdown编辑器写博客</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1125</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。<br>
+       <!-- 学学Markdown是怎么写文章的!!! -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/25/mac_docker_document/" target="_blank" title="mac_docker_document"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="https://docs.docker.com/docker-for-mac/#file-sharing" target="_blank" title="mac_docker_document">mac_docker_document</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1125</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/virtualization/" target="_self">virtualization</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+            
+                   引自于:<a class="post-title" href="https://docs.docker.com/docker-for-mac/#file-sharing" target="_blank" title="mac_docker_document">https://docs.docker.com/docker-for-mac/#file-sharing</a>
+             
+             
+        
+         
+
+
+     <p><a href="https://docs.docker.com/docker-for-mac/#file-sharing" target="_blank" rel="noopener">https://docs.docker.com/docker-for-mac/#file-sharing</a><br>
+       <!-- mac_docker_document -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/25/AI技术能让老板更好地监督你/" target="_blank" title="AI技术能让老板更好地监督你"
+           style="background-image:url(/images/rssFeed-bg.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/25/AI技术能让老板更好地监督你/" target="_self" title="AI技术能让老板更好地监督你">AI技术能让老板更好地监督你</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1125</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p><img src="http://img.blog.csdn.net/20171125220411893?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>在日常生活中，我们与 AI 可能有多次交互机会，但其中许多交互我们自己可能都没意识到。人工智能已经嵌入到应用非常广泛的一些消费技术中，许多消费者也都没注意到。因此，要说人工智能为现代办公注入了更强大的功能自然也不足为奇。以企业为重点的人工智能技术能够将老板和员工的关系引导向一个更有趣的方向，并且这一转型目前已经开始发生。<br>
+       <!-- AI技术能让老板更好地监督你 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/25/20171125_1_幂等实现总结/" target="_blank" title="20171125日进一步-幂等实现总结"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/25/20171125_1_幂等实现总结/" target="_self" title="20171125日进一步-幂等实现总结">20171125日进一步-幂等实现总结</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1125</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p><img src="http://img.blog.csdn.net/20171125204837961?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>
+       <!-- 讲幂等的设计,好文哦!!! -->
+    </div>
+
+</article>
+
+
+
+    
+</div>
+<!-- 分页开始 -->
+
+<div id="btn-pager">
+    
+    <a class="extend prev" rel="prev" href="/tags/学习/">Prev</a><a class="page-number" href="/tags/学习/">1</a><span class="page-number current">2</span>
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-mysql binlog解析 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+
+
+<li><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" >2018寄语</a></li>
+
+<!--
+
+        <li><a href="/">首页</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/日进一步" data-name="学习">学习</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/诗词" data-name="诗词">诗词</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/base" data-name="基础">基础</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/algorithm" data-name="算法">算法</a>
+                </li>
+            
+        
+         <li >
+
+
+-->
+            <!--
+                    <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            -->
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+
+<script type="text/javascript">
+     
+</script>
+
+
+<div class="main-inner">
+    <article class="post animated slideInRight" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="http://xiaohuozi51.coding.me/" target="_blank">
+                    <img width="48" src="/images/avatar.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span >正</span>
+                   <!-- <a href="" target="_blank">正</a> -->
+                </p>
+                <p>不关注架构设计细节的程序员不是一个好架构师</p>
+            </div>
+            <h2 class="post-title">MySQL Binlog解析</h2>
+            <div class="post-meta">
+             共<span style='color:blue'>5759</span>字 | 阅读<span id="busuanzi_value_page_pv" style='color:red'><i class="fa fa-spinner fa-spin"></i></span>次 | 创建于:<span title="最后编辑于2018/0131">2018/0131</span>
+            
+          
+
+                     <a href="/categories" target="_blank"><i class="fa fa-book"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_blank">数据库</a>
+              
+              <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/mysql/" target="_blank">mysql</a>
+            
+            
+
+            
+
+            
+
+
+            </div>
+           
+        </div>
+         <!--
+        
+            <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+            
+         -->
+        
+                <p style='text-align:center;color:red;font-weight:bold;'>站点微信订阅号zhengjinyibu,欢迎大家搜索关注.</p>
+        
+        
+        
+        
+
+    
+        <div class="post-content markdown-body">
+            <p>引用自:<br><a href="https://yq.aliyun.com/articles/238364?spm=5176.10695662.1996646101.searchclickresult.4e582ae9RunAqR" target="_blank" rel="noopener">https://yq.aliyun.com/articles/238364?spm=5176.10695662.1996646101.searchclickresult.4e582ae9RunAqR</a></p>
+<p>MySQL Server 有四种类型的日志——Error Log、General Query Log、Binary Log 和 Slow Query Log。</p>
+<p>第一个是错误日志，记录 mysqld 的一些错误。第二个是一般查询日志，记录 mysqld 正在做的事情，比如客户端的连接和断开、来自客户端每条 Sql Statement 记录信息；如果你想准确知道客户端到底传了什么瞎 [哔哔] 玩意儿给服务端，这个日志就非常管用了，不过它非常影响性能。第四个是慢查询日志，记录一些查询比较慢的 SQL 语句——这种日志非常常用，主要是给开发者调优用的。</p>
+<p>剩下的第三种就是 Binlog 了，包含了一些事件，这些事件描述了数据库的改动，如建表、数据改动等，也包括一些潜在改动，比如 DELETE FROM ran WHERE bing = luan，然而一条数据都没被删掉的这种情况。除非使用 Row-based logging，否则会包含所有改动数据的 SQL Statement。</p>
+<p>那么 Binlog 就有了两个重要的用途——复制和恢复。比如主从表的复制，和备份恢复什么的。</p>
+<p>显然，我们执行SELECT等不设计数据变更的语句是不会记录Binlog的，而涉及到数据更新则会记录。要注意的是，对支持事务的引擎如InnoDB而言，必须要提交了事务才会记录Binlog。Binlog是在事务最终commit前写入的，binlog什么时候刷新到磁盘跟参数sync_binlog相关。如果设置为0，则表示MySQL不控制binlog的刷新，由文件系统去控制它缓存的刷新，而如果设置为不为0的值则表示每sync_binlog次事务，MySQL调用文件系统的刷新操作刷新binlog到磁盘中。设为1是最安全的，在系统故障时最多丢失一个事务的更新，但是会对性能有所影响，一般情况下会设置为100或者0，牺牲一定的一致性来获取更好的性能。</p>
+<a id="more"></a>
+<h3 id="Binlog文件的扩展"><a href="#Binlog文件的扩展" class="headerlink" title="Binlog文件的扩展"></a>Binlog文件的扩展</h3><p>当遇到以下3种情况时会重新生成一个新的日志文件，文件序号递增：</p>
+<p>MySQL服务器停止或重启时，MySQL会在重启时生成一个新的日志文件；<br>使用flush logs命令；<br>当binlog文件大小超过max_binlog_size系统变量配置的上限时；<br>binlog文件的最大值和默认值是1GB，该设置并不能严格控制binlog的大小，尤其是binlog比较靠近最大值而又遇到一个比较大事务时，为了保证事务的完整性，不可能做切换日志的动作，只能将该事务的所有SQL都记录到当前日志，直到事务结束。</p>
+<h3 id="Binlog的日志格式"><a href="#Binlog的日志格式" class="headerlink" title="Binlog的日志格式"></a>Binlog的日志格式</h3><p>binlog有三种格式：Statement, Row和Mixed.</p>
+<p>基于SQL语句的复制（statement-based replication, SBR）<br>基于行的复制（row-based replication, RBR）<br>混合模式复制（mixed-based replication, MBR）</p>
+<h4 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h4><p>每一条会修改数据的sql都会记录在binlog中。</p>
+<p>优点：不需要记录每一行的变化，减少了binlog日志量，节约了IO, 提高了性能。</p>
+<p>缺点：由于记录的只是执行语句，为了这些语句能在slave上正确运行，因此还必须记录每条语句在执行的时候的一些相关信息，以保证所有语句能在slave得到和在master端执行的时候相同的结果。另外mysql的复制，像一些特定函数的功能，slave可与master上要保持一致会有很多相关问题。</p>
+<p>相比row能节约多少性能与日志量，这个取决于应用的SQL情况，正常同一条记录修改或者插入row格式所产生的日志量还小鱼statement产生的日志量，但是考虑到如果带条件的update操作，以及整表删除，alter表等操作，row格式会产生大量日志，因此在考虑是否使用row格式日志时应该根据应用的实际情况，其所产生的日志量会增加多少，以及带来的IO性能问题。</p>
+<h4 id="Row"><a href="#Row" class="headerlink" title="Row"></a>Row</h4><p>5.1.5版本的MySQL才开始支持row level的复制,它不记录sql语句上下文相关信息，仅保存哪条记录被修改。</p>
+<p>优点： binlog中可以不记录执行的sql语句的上下文相关的信息，仅需要记录那一条记录被修改成什么了。所以row的日志内容会非常清楚的记录下每一行数据修改的细节。而且不会出现某些特定情况下的存储过程，或function，以及trigger的调用和触发无法被正确复制的问题.</p>
+<p>缺点:所有的执行的语句当记录到日志中的时候，都将以每行记录的修改来记录，这样可能会产生大量的日志内容。</p>
+<p>新版本的MySQL中对row level模式也被做了优化，并不是所有的修改都会以row level来记录，像遇到表结构变更的时候就会以statement模式来记录，如果sql语句确实就是update或者delete等修改数据的语句，那么还是会记录所有行的变更。</p>
+<h4 id="Mixed"><a href="#Mixed" class="headerlink" title="Mixed"></a>Mixed</h4><p>从5.1.8版本开始，MySQL提供了Mixed格式，实际上就是Statement与Row的结合。<br>在Mixed模式下，一般的语句修改使用statment格式保存binlog，如一些函数，statement无法完成主从复制的操作，则采用row格式保存binlog，MySQL会根据执行的每一条具体的sql语句来区分对待记录的日志形式，也就是在Statement和Row之间选择一种。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">show binlog events in “mysql-bin.000005”; </span><br><span class="line"></span><br><span class="line">mysql&gt; show binlog events in &apos;mysql-bin.000005&apos;;</span><br><span class="line">+------------------+-----+-------------+-----------+-------------+---------------------------------------+</span><br><span class="line">| Log_name         | Pos | Event_type  | Server_id | End_log_pos | Info                                  |</span><br><span class="line">+------------------+-----+-------------+-----------+-------------+---------------------------------------+</span><br><span class="line">| mysql-bin.000005 |   4 | Format_desc |         2 |         107 | Server ver: 5.5.51-log, Binlog ver: 4 |</span><br><span class="line">| mysql-bin.000005 | 107 | Query       |         2 |         181 | BEGIN                                 |</span><br><span class="line">| mysql-bin.000005 | 181 | Table_map   |         2 |         239 | table_id: 44 (canal_test.company)     |</span><br><span class="line">| mysql-bin.000005 | 239 | Write_rows  |         2 |         287 | table_id: 44 flags: STMT_END_F        |</span><br><span class="line">| mysql-bin.000005 | 287 | Xid         |         2 |         314 | COMMIT /* xid=23915 */                |</span><br><span class="line">| mysql-bin.000005 | 314 | Query       |         2 |         388 | BEGIN                                 |</span><br><span class="line">| mysql-bin.000005 | 388 | Table_map   |         2 |         449 | table_id: 35 (canal_test.person)      |</span><br><span class="line">| mysql-bin.000005 | 449 | Update_rows |         2 |         526 | table_id: 35 flags: STMT_END_F        |</span><br><span class="line">| mysql-bin.000005 | 526 | Xid         |         2 |         553 | COMMIT /* xid=26960 */                |</span><br><span class="line">| mysql-bin.000005 | 553 | Query       |         2 |         627 | BEGIN                                 |</span><br><span class="line">| mysql-bin.000005 | 627 | Table_map   |         2 |         688 | table_id: 35 (canal_test.person)      |</span><br><span class="line">| mysql-bin.000005 | 688 | Write_rows  |         2 |         741 | table_id: 35 flags: STMT_END_F        |</span><br><span class="line">| mysql-bin.000005 | 741 | Xid         |         2 |         768 | COMMIT /* xid=26961 */                |</span><br><span class="line">| mysql-bin.000005 | 768 | Query       |         2 |         842 | BEGIN                                 |</span><br><span class="line">| mysql-bin.000005 | 842 | Table_map   |         2 |         903 | table_id: 35 (canal_test.person)      |</span><br><span class="line">| mysql-bin.000005 | 903 | Delete_rows |         2 |         956 | table_id: 35 flags: STMT_END_F        |</span><br><span class="line">| mysql-bin.000005 | 956 | Xid         |         2 |         983 | COMMIT /* xid=26964 */                |</span><br><span class="line">+------------------+-----+-------------+-----------+-------------+---------------------------------------+</span><br><span class="line">17 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>binlog的事件类型一共有以下几种：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">enum Log_event_type &#123; </span><br><span class="line">  UNKNOWN_EVENT= 0, </span><br><span class="line">  START_EVENT_V3= 1, </span><br><span class="line">  QUERY_EVENT= 2, </span><br><span class="line">  STOP_EVENT= 3, </span><br><span class="line">  ROTATE_EVENT= 4, </span><br><span class="line">  INTVAR_EVENT= 5, </span><br><span class="line">  LOAD_EVENT= 6, </span><br><span class="line">  SLAVE_EVENT= 7, </span><br><span class="line">  CREATE_FILE_EVENT= 8, </span><br><span class="line">  APPEND_BLOCK_EVENT= 9, </span><br><span class="line">  EXEC_LOAD_EVENT= 10, </span><br><span class="line">  DELETE_FILE_EVENT= 11, </span><br><span class="line">  NEW_LOAD_EVENT= 12, </span><br><span class="line">  RAND_EVENT= 13, </span><br><span class="line">  USER_VAR_EVENT= 14, </span><br><span class="line">  FORMAT_DESCRIPTION_EVENT= 15, </span><br><span class="line">  XID_EVENT= 16, </span><br><span class="line">  BEGIN_LOAD_QUERY_EVENT= 17, </span><br><span class="line">  EXECUTE_LOAD_QUERY_EVENT= 18, </span><br><span class="line">  TABLE_MAP_EVENT = 19, </span><br><span class="line">  PRE_GA_WRITE_ROWS_EVENT = 20, </span><br><span class="line">  PRE_GA_UPDATE_ROWS_EVENT = 21, </span><br><span class="line">  PRE_GA_DELETE_ROWS_EVENT = 22, </span><br><span class="line">  WRITE_ROWS_EVENT = 23, </span><br><span class="line">  UPDATE_ROWS_EVENT = 24, </span><br><span class="line">  DELETE_ROWS_EVENT = 25, </span><br><span class="line">  INCIDENT_EVENT= 26, </span><br><span class="line">  HEARTBEAT_LOG_EVENT= 27, </span><br><span class="line">  IGNORABLE_LOG_EVENT= 28,</span><br><span class="line">  ROWS_QUERY_LOG_EVENT= 29,</span><br><span class="line">  WRITE_ROWS_EVENT_V2 = 30,</span><br><span class="line">  UPDATE_ROWS_EVENT_V2 = 31,</span><br><span class="line">  DELETE_ROWS_EVENT_V2 = 32,</span><br><span class="line">  GTID_LOG_EVENT= 33,</span><br><span class="line">  ANONYMOUS_GTID_LOG_EVENT= 34,</span><br><span class="line">  PREVIOUS_GTIDS_LOG_EVENT= 35, </span><br><span class="line">  ENUM_END_EVENT </span><br><span class="line">  /* end marker */ </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+        </div>
+         
+    <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+    
+      <!--
+        <div class="post-tool">
+        
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            
+        
+        </div>
+          -->
+          <div class="aligncenter">
+                
+                    <div class="post-tags">Tags：
+                        
+                        <a href="/tags/mysql/">mysql</a>
+                        
+                    </div>
+                
+          </div>
+
+         
+
+<div>
+ <br/>
+ 
+         <div class=" post-tags" style="float:left;font-size:15px;">
+                <a   href="/2018/02/01/canal数据库同步架构图/" title="canal高可用架构图">
+                           <i class="fa fa-chevron-left"></i>  <em>·</em> canal高可用架构图
+                </a>
+         </div>
+ 
+        
+            <div class=" post-tags" style="float:right;font-size:15px;">
+                    <a class=" post-tags" style="float:right" href="/2018/01/30/canal_客户端使用说明/" title="Canal Client API使用说明">
+                        Canal Client API使用说明  <em>·</em> <i class="fa fa-chevron-right"></i>
+                    </a>
+            </div>
+        
+
+</div>
+
+    </article>
+
+
+    
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div style="float:right;">
+   <i class="fa fa-question" aria-hidden="true"></i>
+   <span style='color:red;font-weight:bold;'>评论加载延迟属正常现象</span>
+</div>
+
+<div id="gitment-container"></div>
+<script type="text/javascript">
+    var gitment = new Gitment({
+        id: document.location.href,
+        owner: 'hotbain',
+        repo: 'day2up_comments',
+        oauth: {
+            client_id: 'c36e8df7a6f947e8e429',
+            client_secret: '1bd8694231b9c7f324d06d850415749253f6704f',
+        }
+    });
+    gitment.render('gitment-container');
+</script>
+
+
+</div>
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-标签 - 基础 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+         <li class="active"><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" " title="2018寄语">2018寄语</a></li>
+
+       <!--
+ 
+        <li class="">
+            <a href="/categories/日进一步" data-name="学习">学习</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/诗词" data-name="诗词">诗词</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/base" data-name="基础">基础</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/algorithm" data-name="算法">算法</a>
+        </li>
+        
+       -->
+         
+          <!--
+          <li >
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+             </li>
+          -->
+       
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/02/Java等号右边计算过程_i++例子/" target="_blank" title="Java等号右边计算过程_i++例子"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/02/Java等号右边计算过程_i++例子/" target="_self" title="Java等号右边计算过程_i++例子">Java等号右边计算过程_i++例子</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0202</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/基础/" target="_self">基础</a>
+            
+                <em>·</em>
+                <a href="/tags/查缺补漏/" target="_self">查缺补漏</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h2 id="查缺补漏"><a href="#查缺补漏" class="headerlink" title="查缺补漏"></a>查缺补漏</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">            &#123;</span><br><span class="line">                i=i++;</span><br><span class="line">            &#125;</span><br><span class="line">            &#123; <span class="comment">//相当于下面的代码</span></span><br><span class="line">                <span class="keyword">int</span> temp= m;</span><br><span class="line">                m++;</span><br><span class="line">                m= temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"i的最后结果"</span>+i);</span><br><span class="line">        System.out.println(<span class="string">"m的最后结果"</span>+m);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>结果：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i的最后结果<span class="number">0</span></span><br><span class="line">m的最后结果<span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+       <!-- Java等号右边计算过程_i++例子 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/02/Volatile作用及面试内容/" target="_blank" title="Volatile作用及面试内容"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/02/Volatile作用及面试内容/" target="_self" title="Volatile作用及面试内容">Volatile作用及面试内容</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0202</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/基础/" target="_self">基础</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用自: <a href="https://mp.weixin.qq.com/s/bvqVBnYPdFvpQqdB_4kdUQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/bvqVBnYPdFvpQqdB_4kdUQ</a></p>
+<h4 id="volatile-能使得一个非原子操作变成原子操作吗？"><a href="#volatile-能使得一个非原子操作变成原子操作吗？" class="headerlink" title="volatile 能使得一个非原子操作变成原子操作吗？"></a>volatile 能使得一个非原子操作变成原子操作吗？</h4><blockquote>
+<p>一个典型的例子是在类中有一个long 类型的成员变量。如果你知道该成员变量会被多个线程访问，如计数器、价格等，你最好是将其设置为 volatile。为什么？因为 Java 中读取long 类型变量不是原子的，需要分成两步，如果一个线程正在修改该 long 变量的值，另一个线程可能只能看到该值的一半（前 32 位）。但是对一个 volatile 型的 long 或double 变量的读写是原子。</p>
+</blockquote>
+<h4 id="volatile-类型变量提供什么保证？"><a href="#volatile-类型变量提供什么保证？" class="headerlink" title="volatile 类型变量提供什么保证？"></a>volatile 类型变量提供什么保证？</h4><blockquote>
+<p>volatile 变量提供顺序和可见性保证，例如，JVM或者 JIT为了获得更好的性能会对语句重排序，但是 volatile 类型变量即使在没有同步块的情况下赋值也不会与其他语句重排序。 volatile 提供 happens-before 的保证，确保一个线程的修改能对其他线程是可见的。某些情况下，volatile 还能提供原子性，如读 64 位数据类型，像 long 和 double 都不是原子的，但 volatile 类型的 double 和 long 就是原子的。</p>
+</blockquote>
+<h4 id="volatile-修饰符的有过什么实践？"><a href="#volatile-修饰符的有过什么实践？" class="headerlink" title="volatile 修饰符的有过什么实践？"></a>volatile 修饰符的有过什么实践？</h4><blockquote>
+<p>一种实践是用 volatile 修饰 long 和 double 变量，使其能按原子类型来读写。double 和 long 都是64位宽，因此对这两种类型的读是分为两部分的，第一次读取第一个 32 位，然后再读剩下的 32 位，这个过程不是原子的，但Java 中 volatile 型的 long 或 double 变量的读写是原子的。volatile 修复符的另一个作用是提供内存屏障（memory barrier），例如在分布式框架中的应用。简单的说，就是当你写一个 volatile 变量之前，Java 内存模型会插入一个写屏障（writebarrier），读一个volatile 变量之前，会插入一个读屏障（read barrier）。意思就是说，在你写一个volatile 域时，能保证任何线程都能看到你写的值，同时，在写之前，也能保证任何数值的更新对所有线程是可见的，因为内存屏障会将其他所有写的值更新到缓存。</p>
+</blockquote>
+       <!-- Volatile作用及面试内容 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/02/漫画_什么是CAS机制/" target="_blank" title="漫画之什么是CAS机制"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/02/漫画_什么是CAS机制/" target="_self" title="漫画之什么是CAS机制">漫画之什么是CAS机制</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0102</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/基础/" target="_self">基础</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>转载自： <a href="https://mp.weixin.qq.com/s/f23I1kyJQoNPu6Ntrx0S6g" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/f23I1kyJQoNPu6Ntrx0S6g</a></p>
+<p>读后感：</p>
+<p><code>Java1.6</code>为Synchronized做了优化，增加了从偏向锁到轻量级锁再到重量级锁的过度，但是在最终转变为重量级锁之后，性能仍然较低. 这其中用到了CAS机制。</p>
+<p>CAS优点</p>
+<blockquote>
+<ul>
+<li>Synchronized属于悲观锁，悲观地认为程序中的并发情况严重，所以严防死守。CAS属于乐观锁，乐观地认为程序中的并发情况不那么严重，所以让线程不断去尝试更新。</li>
+<li>避免了context switch</li>
+</ul>
+</blockquote>
+<p>CAS缺点</p>
+<blockquote>
+<ul>
+<li>CPU消耗较大，不适合高并发场景(因为冲突太多，失败率高)。</li>
+<li>ABA问题</li>
+<li>不能保证代码块的原子性。例如不能保证多个变量同时更新.</li>
+</ul>
+</blockquote>
+<h3 id="乐观锁转悲观锁的经典代码见：ConcurrentHashMap的size方法"><a href="#乐观锁转悲观锁的经典代码见：ConcurrentHashMap的size方法" class="headerlink" title="乐观锁转悲观锁的经典代码见：ConcurrentHashMap的size方法"></a>乐观锁转悲观锁的经典代码见：ConcurrentHashMap的size方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Try a few times to get accurate count. On failure due to</span></span><br><span class="line">        <span class="comment">// continuous async changes in table, resort to locking.</span></span><br><span class="line">        <span class="keyword">final</span> Segment&lt;K,V&gt;[] segments = <span class="keyword">this</span>.segments;</span><br><span class="line">        <span class="keyword">int</span> size;</span><br><span class="line">        <span class="keyword">boolean</span> overflow; <span class="comment">// true if size overflows 32 bits</span></span><br><span class="line">        <span class="keyword">long</span> sum;         <span class="comment">// sum of modCounts</span></span><br><span class="line">        <span class="keyword">long</span> last = <span class="number">0L</span>;   <span class="comment">// previous sum</span></span><br><span class="line">        <span class="keyword">int</span> retries = -<span class="number">1</span>; <span class="comment">// first iteration isn't retry</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                <span class="keyword">if</span> (retries++ == RETRIES_BEFORE_LOCK) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; segments.length; ++j)</span><br><span class="line">                        ensureSegment(j).lock(); <span class="comment">// force creation</span></span><br><span class="line">                &#125;</span><br><span class="line">                sum = <span class="number">0L</span>;</span><br><span class="line">                size = <span class="number">0</span>;</span><br><span class="line">                overflow = <span class="keyword">false</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; segments.length; ++j) &#123;</span><br><span class="line">                    Segment&lt;K,V&gt; seg = segmentAt(segments, j);</span><br><span class="line">                    <span class="keyword">if</span> (seg != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        sum += seg.modCount;</span><br><span class="line">                        <span class="keyword">int</span> c = seg.count;</span><br><span class="line">                        <span class="keyword">if</span> (c &lt; <span class="number">0</span> || (size += c) &lt; <span class="number">0</span>)</span><br><span class="line">                            overflow = <span class="keyword">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (sum == last)</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                last = sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (retries &gt; RETRIES_BEFORE_LOCK) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; segments.length; ++j)</span><br><span class="line">                    segmentAt(segments, j).unlock();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> overflow ? Integer.MAX_VALUE : size;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+       <!-- 漫画_什么是CAS机制 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/02/Java能修改private_final类型变量吗_setAccessible_true/" target="_blank" title="Java能修改Final类型变量吗_setAccessible_true"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/02/Java能修改private_final类型变量吗_setAccessible_true/" target="_self" title="Java能修改Final类型变量吗_setAccessible_true">Java能修改Final类型变量吗_setAccessible_true</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0102</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/基础/" target="_self">基础</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>Field的public void setAccessible(boolean flag) 说明</p>
+<blockquote>
+<pre><code>   * Set the {@code accessible} flag for this object to
+* the indicated boolean value.  A value of {@code true} indicates that
+* the reflected object should suppress Java language access
+* checking when it is used.  A value of {@code false} indicates
+* that the reflected object should enforce Java language access checks.
+</code></pre></blockquote>
+<p>如果flag设置为true，那么就会压制java语言的访问校验。</p>
+       <!-- Java能修改private_final类型变量吗_setAccessible_true -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/26/Java_return_finnaly探究/" target="_blank" title="微信勘误:try{}里有一个return语句，那么紧跟在这个try后的finally{}里的code会不会被执行，什么时候被执行，在return前还是后?"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/26/Java_return_finnaly探究/" target="_self" title="微信勘误:try{}里有一个return语句，那么紧跟在这个try后的finally{}里的code会不会被执行，什么时候被执行，在return前还是后?">微信勘误:try{}里有一个return语句，那么紧跟在这个try后的finally{}里的code会不会被执行，什么时候被执行，在return前还是后?</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1126</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/基础/" target="_self">基础</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        callMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">callMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"call method"</span>);</span><br><span class="line">            <span class="keyword">return</span> i();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception ex)&#123;</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"finally block "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span>  <span class="keyword">static</span>  <span class="keyword">int</span> <span class="title">i</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"i method"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">call method</span><br><span class="line">i method</span><br><span class="line">finally block</span><br></pre></td></tr></table></figure>
+       <!-- Java基础,有嚼头!!! -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/11/26/Java_String_Replace实现分析/" target="_blank" title="Java_String_Replace实现分析"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/11/26/Java_String_Replace实现分析/" target="_self" title="Java_String_Replace实现分析">Java_String_Replace实现分析</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1126</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/基础/" target="_self">基础</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     Java基础学习,有嚼头!!!
+       <!-- Java基础学习,有嚼头!!! -->
+    </div>
+
+</article>
+
+
+
+    
+</div>
+<!-- 分页开始 -->
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

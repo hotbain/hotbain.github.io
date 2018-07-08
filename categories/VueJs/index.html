@@ -1,0 +1,1196 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-分类 - vuejs - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+         <li class="active"><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" " title="2018寄语">2018寄语</a></li>
+
+       <!--
+ 
+        <li class="">
+            <a href="/categories/日进一步" data-name="学习">学习</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/诗词" data-name="诗词">诗词</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/base" data-name="基础">基础</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/algorithm" data-name="算法">算法</a>
+        </li>
+        
+       -->
+         
+          <!--
+          <li >
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+             </li>
+          -->
+       
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/07/VueJs自定义指令/" target="_blank" title="VueJs自定义指令"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/07/VueJs自定义指令/" target="_self" title="VueJs自定义指令">VueJs自定义指令</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0307</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     VueJs自定义指令
+       <!-- VueJs自定义指令 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/10/Vuex_props传递函数/" target="_blank" title="Vuex_通过props传递函数,顶替事件通知"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/10/Vuex_props传递函数/" target="_self" title="Vuex_通过props传递函数,顶替事件通知">Vuex_通过props传递函数,顶替事件通知</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0210</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p> Vuex_通过props传递函数,顶替事件通知</p>
+</blockquote>
+<blockquote>
+<p>传递给 子组件的函数prop可以来自自身的methods和data域.都是可以的.</p>
+</blockquote>
+       <!-- Vuex_通过props传递函数,顶替事件通知 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/09/Vuex_mutations/" target="_blank" title="VueJs_mutations"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/09/Vuex_mutations/" target="_self" title="VueJs_mutations">VueJs_mutations</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     VueJs_mutations
+       <!-- VueJs_mutations -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/09/Vuex_getters/" target="_blank" title="VueJs_getters"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/09/Vuex_getters/" target="_self" title="VueJs_getters">VueJs_getters</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">"sub1"</span>,&#123;</span><br><span class="line">       template:<span class="string">"#sub1"</span>,</span><br><span class="line">       methods:&#123;</span><br><span class="line">       &#125;,</span><br><span class="line">       computed:&#123;</span><br><span class="line">           totalPrice:function()&#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.totalPrice;</span><br><span class="line">           &#125;,</span><br><span class="line">           goods:function()&#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.goods;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+       <!-- VueJs_getters -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/09/Vuex_actions/" target="_blank" title="VueJs_actions"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/09/Vuex_actions/" target="_self" title="VueJs_actions">VueJs_actions</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>this.$store.dispatch(“loadData”) 触发 store的actions</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">actions:&#123;</span><br><span class="line">        loadData:function(store)&#123;</span><br><span class="line">            axios.get(<span class="string">"/admin/banner/cartList"</span>).then(function(resp)&#123;</span><br><span class="line">                store.commit(<span class="string">"setGoods"</span>,&#123;goods:resp.data&#125;);</span><br><span class="line">                <span class="comment">//激发mutations</span></span><br><span class="line">            &#125;).<span class="keyword">catch</span>(function()&#123;</span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+       <!-- VueJs_actions -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/09/VueJs_动态组件is/" target="_blank" title="VueJs_动态组件is"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/09/VueJs_动态组件is/" target="_self" title="VueJs_动态组件is">VueJs_动态组件is</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"c"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>通过component动态设置组件</p>
+</blockquote>
+       <!-- VueJs_动态组件is -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/09/Vuex入门/" target="_blank" title="Vue状态管理之Vuex入门"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/09/Vuex入门/" target="_self" title="Vue状态管理之Vuex入门">Vue状态管理之Vuex入门</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>将store放在root vue实例中，便于共享数据<br>获取数据时，放到computed里，这样可以保证 数据是可响应的.<br>
+       <!-- Vuex入门 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/09/VueJs_$nextTick/" target="_blank" title="VueJs_$nextTick"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/09/VueJs_$nextTick/" target="_self" title="VueJs_$nextTick">VueJs_$nextTick</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>你在Vue生命周期的created()钩子函数进行的DOM操作一定要放在Vue.nextTick()的回调函数中。原因是什么呢，原因是在created()钩子函数执行的时候DOM 其实并未进行任何渲染，而此时进行DOM操作无异于徒劳，所以此处一定要将DOM操作的js代码放进Vue.nextTick()的回调函数中。与之对应的就是mounted钩子函数，因为该钩子函数执行时所有的DOM挂载和渲染都已完成，此时在该钩子函数中进行任何DOM操作都不会有问题 。在数据变化后要执行的某个操作，而这个操作需要使用随数据改变而改变的DOM结构的时候，这个操作都应该放进Vue.nextTick()的回调函数中。</p>
+</blockquote>
+<blockquote>
+<p>Vue 在观察到数据变化时并不是直接更新DOM，而是开启一个队列，并缓冲在同一事件循环<br>中发生的所有数据改变。在缓冲时会去除重复数据，从而避免不必要的计算和DOM 操作。然后，<br>在下一个事件循环tick 中， Vue 刷新队列井执行实际（己去重的）工作。所以如果你用一个for 循<br>环来动态改变数据100•次，其实它只会应用最后一次改变，如果没有这种机制， DOM 就要重绘100<br>次，这固然是一个很大的开销。<br>Vue 会根据当前浏览器环境优先使用原生的Promise 血en 和MutationObserver ，如果都不支持，<br>就会采用setTimeout 代替。</p>
+</blockquote>
+<blockquote>
+<p>理论上，我们应该不用去主动操作DOM ，因为Vue 的核心思想就是数据驱动DOM ，但在很<br>多业务里，我们避免不了会使用一些第三方库，比如popper等，这些基于原生JavaScript 的库都有创建和更新及销毁的完整生命周<br>期，与Vue 配合使用时，就要利用好$nextTick 。</p>
+</blockquote>
+       <!-- VueJs_$nextTick -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/08/VueJs_Slot_scope/" target="_blank" title="VueJs_slot_scope数据传输插槽"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/08/VueJs_Slot_scope/" target="_self" title="VueJs_slot_scope数据传输插槽">VueJs_slot_scope数据传输插槽</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0208</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>Slot_scope 实际上就是用于 将组件内部的slot处的变量 放到了外部的template(div 也可以，大家可以多试几个)中,通过slot-scope进行使用<br>同一个slot内只能被放置一次</p>
+</blockquote>
+       <!-- VueJs_slot_scope数据传输插槽 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/08/VueJs_InlineTemplate/" target="_blank" title="VueJs_InlineTemplate"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/08/VueJs_InlineTemplate/" target="_self" title="VueJs_InlineTemplate">VueJs_InlineTemplate</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0208</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>内联模板需要通过props传递数据</p>
+</blockquote>
+       <!-- VueJs_InlineTemplate -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/07/VueJs_$set动态响应属性添加/" target="_blank" title="VueJs_$set动态响应属性添加"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/07/VueJs_$set动态响应属性添加/" target="_self" title="VueJs_$set动态响应属性添加">VueJs_$set动态响应属性添加</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>来自:<a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/reactivity.html</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Vue.set(this.user,this.property,"1_1"); 这种写法也是对的</span></span><br><span class="line"><span class="keyword">this</span>.$set(<span class="keyword">this</span>.user,<span class="keyword">this</span>.property,<span class="string">"1_1"</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> Vue 不允许动态添加根级响应式属性，所以你必须在初始化实例前声明根级响应式属性，哪怕只是一个空值<br>受现代 JavaScript 的限制 (以及废弃 Object.observe)，Vue 不能检测到对象属性的添加或删除。由于 Vue 会在初始化实例时对属性执行 getter/setter 转化过程，所以属性必须在 data 对象上存在才能让 Vue 转换它，这样才能让它是响应的</p>
+</blockquote>
+       <!-- VueJs_$set动态响应属性添加 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/07/VueJs_组建通信_VueBus/" target="_blank" title="VueJs_组建通信_VueBus"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/07/VueJs_组建通信_VueBus/" target="_self" title="VueJs_组建通信_VueBus">VueJs_组建通信_VueBus</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">var bus =<span class="keyword">new</span> Vue();</span><br><span class="line">    Vue.component(<span class="string">"myButton"</span>,&#123;</span><br><span class="line">        template:<span class="string">"#my_input"</span>,</span><br><span class="line">        data:function()&#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                counter:<span class="number">1</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            updateVal:function()&#123;</span><br><span class="line">                bus.name= ++<span class="keyword">this</span>.counter;</span><br><span class="line">                bus.$emit(<span class="string">"on-message"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">    var app=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">"#app"</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            <span class="string">"name"</span>:<span class="string">"namehere"</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">        &#125;,</span><br><span class="line">        mounted:function()&#123;</span><br><span class="line">            var _this= <span class="keyword">this</span>;</span><br><span class="line">            bus.$on(<span class="string">"on-message"</span>,function()&#123;</span><br><span class="line">                _this.name=bus.name;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+       <!-- VueJs_组建通信_VueBus -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/07/VueJs_组件通信_Model/" target="_blank" title="VueJs_组件通信_Model"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/07/VueJs_组件通信_Model/" target="_self" title="VueJs_组件通信_Model">VueJs_组件通信_Model</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-button</span> <span class="attr">v-model</span>=<span class="string">"value"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-button</span> <span class="attr">:value</span>=<span class="string">"value"</span>  <span class="attr">:name</span>=<span class="string">"name"</span> @<span class="attr">input</span>=<span class="string">"fname"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>v-model 实际上就是 @input的简写</p>
+</blockquote>
+       <!-- VueJs_组件通信_Model -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/06/VueJs_Emit使用/" target="_blank" title="VueJs_Emit使用"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/06/VueJs_Emit使用/" target="_self" title="VueJs_Emit使用">VueJs_Emit使用</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0206</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">"myButton"</span>,&#123;</span><br><span class="line">        template:<span class="string">"#button_template"</span>,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            fireEventForParent:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.$emit(<span class="string">"close"</span>,event,&#123;<span class="attr">name</span>:<span class="string">"gz"</span>&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        data:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">var</span> app=<span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">"#app"</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            <span class="string">"name"</span>:<span class="string">"gz"</span>,</span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            processClose:<span class="function"><span class="keyword">function</span>(<span class="params">$event,obj</span>)</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.info(obj)</span><br><span class="line">                <span class="built_in">console</span>.info($event)</span><br><span class="line">                <span class="built_in">console</span>.info(<span class="string">"close process invoked"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+       <!-- VueJs_Emit使用 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/06/VueJs_Props学习/" target="_blank" title="VueJs_Props学习"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/06/VueJs_Props学习/" target="_self" title="VueJs_Props学习">VueJs_Props学习</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0206</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div2 :u="user" :d="data" txt="helloworld" arr="[1,2,3]"&gt;&lt;/div2&gt;</span><br><span class="line">   &lt;div2 :u="user" :d="data" txt="helloworld" :arr="[1,2,3]"&gt;&lt;/div2&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>props 中声明的数据与组件data 函数return 的数据主要区别就是props 的来自父级，而data 中<br>的是组件自己的数据，作用域是组件本身，这两种数据都可以在模板template 及计算属性computed<br>和方法methods 中使用.<br>如果你要直接传递数字、布尔值、数组、对象，而且不使用v-bind ，传递的仅<br>仅是字符串<br>如果是引用类型，指向同一个内存空间，所以props 是对<br>苦？ 象和数组时，在子组件内改变是会影响父纽件的。</p>
+</blockquote>
+       <!-- VueJs_Props学习 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/06/VueJs_Model_Modifier/" target="_blank" title="VueJs_Model绑定修饰符"
+           style="background-image:url(/images/zheng.jpg)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/06/VueJs_Model_Modifier/" target="_self" title="VueJs_Model绑定修饰符">VueJs_Model绑定修饰符</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0206</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/VueJs/" target="_self">VueJs</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>model修饰符</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-model.trim.number=<span class="string">"data"</span> &gt;</span><br><span class="line"> &lt;div2 :num="data" :bl="false"&gt;&lt;/div2&gt;</span><br></pre></td></tr></table></figure>
+       <!-- VueJs_Model绑定修饰符 -->
+    </div>
+
+</article>
+
+
+
+    
+</div>
+<!-- 分页开始 -->
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-软件开发之技能梳理 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="软件开发之技能梳理">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+
+
+<li><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" >2018寄语</a></li>
+
+<!--
+
+        <li><a href="/">首页</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/日进一步" data-name="学习">学习</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/诗词" data-name="诗词">诗词</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/base" data-name="基础">基础</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/algorithm" data-name="算法">算法</a>
+                </li>
+            
+        
+         <li >
+
+
+-->
+            <!--
+                    <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            -->
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+
+<script type="text/javascript">
+     
+</script>
+
+
+<div class="main-inner">
+    <article class="post animated slideInRight" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="http://xiaohuozi51.coding.me/" target="_blank">
+                    <img width="48" src="/images/avatar.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span >正</span>
+                   <!-- <a href="" target="_blank">正</a> -->
+                </p>
+                <p>不关注架构设计细节的程序员不是一个好架构师</p>
+            </div>
+            <h2 class="post-title">软件开发之技能梳理</h2>
+            <div class="post-meta">
+             共<span style='color:blue'>3266</span>字 | 阅读<span id="busuanzi_value_page_pv" style='color:red'><i class="fa fa-spinner fa-spin"></i></span>次 | 创建于:<span title="最后编辑于2018/0311">2018/0311</span>
+            
+          
+
+                     <a href="/categories" target="_blank"><i class="fa fa-book"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/方法论/" target="_blank">方法论</a>
+              
+              <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/方法论/" target="_blank">方法论</a>
+            
+            
+
+            
+
+            
+
+
+            </div>
+           
+        </div>
+         <!--
+        
+            <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+            
+         -->
+        
+                <p style='text-align:center;color:red;font-weight:bold;'>站点微信订阅号zhengjinyibu,欢迎大家搜索关注.</p>
+        
+        
+        
+        
+
+    
+        <div class="post-content markdown-body">
+            <p>编程开发本质是运用程序和计算机来解决现实中的各种问题，因此，编程开发人员的才智发挥载体是计算机或者说计算设备，直接武器是程序。程序员用来进行编程开发所需要的技能，归结起来主要如下：</p>
+<p>1.理解计算模型和框架： 顺序计算、并发计算 （并行计算、分布式计算）； 理解应用所基于的计算模型和框架是非常重要的。传统应用通常基于顺序计算，而现代商业应用，比如云计算，通常基于分布式计算架构； 大规模的科学计算应用， 比如基因序列计算， 则基于并行计算。</p>
+<p>2.高效的数据处理：熟悉常用数据结构和算法设计，能够针对计算目标设计高效的数据结构和算法并实现之， 满足性能需求。</p>
+<p>3.大容量的数据管理与检索：至少精通一种主流数据库， 从数据处理中分离出的一种专门针对大量应用数据实时检索要求的技术。</p>
+<p>4.系统底层机制： 进程、信号、 内存管理、API 等， 理解相关概念及实现，熟悉使用Linux&amp;MacOS&amp;Windows至少一种操作系统。</p>
+<p>5.进程的网络通信： TCP/IP socket ， RPC ，Http ， 序列化与反序列化， 熟悉网络程序设计的底层原理。</p>
+<p>6.编程语言： 面向过程、面向对象、脚本语言、函数型、浏览器语言等，最好每种类型语言掌握一种。</p>
+<p>7.正则表达式：灵活地操作文本和字符串。</p>
+<p>8.代码阅读与维护：能够读懂代码，维护代码，重构或扩展代码。</p>
+<p>9.错误处理技术：异常机制、 返回值与全局变量、 直接退出或重续 等； 建造稳固可靠的应用的必要基础。</p>
+<p>10.网络搜索：寻求有益资源、远程协作伙伴及有效解答。</p>
+<p>11.程序质量：保证程序的时间性能、空间性能、安全性、可靠性、可用性、 可扩展性、可读性、可维护性、可移植性、用户体验。</p>
+<p>12.设计模式：解决实际的设计开发问题， 在现有项目的基础上扩展功能模块时应该会经常用到。</p>
+<p>13.系统架构：用于子系统的设计， 需要项目经验积累。</p>
+<p>14.处理大数据量：通常基于分布式计算架构，比如云计算基础设施。</p>
+<p>15.选用可靠的工具及软件库、包：首先必须确定具体需求，深入了解各种工具、技术与框架及其优劣，然后根据需求选择最适合的那种。</p>
+<p>16.诊断和修复计算机或程序的故障：上网搜索已有解决方案；根据原理进行推断和验证猜想； 排查缩小范围； 对比分析； 打印信息。</p>
+<p>18.除了编程的其它使用计算机解决问题的技术和方法： 比如使用现有的软件。</p>
+<p>针对每个问题，将自己掌握的技术和方法整理出来，并使用示例来说明，基本上就可以了解自己的技术水平了，同时亦可备日后用。积微知著。人们常说的那些“大技能”，其实可以分解为大量的微技能，而积累越多的微技能，在处理问题时便有了越多的选择和思考余地。具体而言：</p>
+<p>1.语言：至少熟悉六种编程语言，掌握两种编程语言。 “熟悉”是指大量学习和使用过，“掌握”是指能够使用该语言 构建大型可靠的软件系统。  对象式，函数式， 过程式，客户端语言，脚本语言，数据语言。 例如， Java / Scala / Python / C / Shell / JavaScript / SQL ；</p>
+<p>2.工具：编辑器 + IDE + 工程构建 + 版本控制 + 控制台 + 浏览器 + 笔记软件。 例如 Vim (Sublime) / IntellJ / Maven / Git / Shell / Chrome；</p>
+<p>3.方法：自顶向下，意图导引，自底向上； First Right, then Good ； 预先设计， 及早动手； 迭代式开发、发布、反馈和成长 ； 预估时间；</p>
+<p>4.风格：K&amp;R C ，  Java 编程规范， 排版整洁，代码简洁无冗余， 一致， 使用地道表达范式；</p>
+<p>5.模型：串行， 并发，多进程， 多线程， MapReduce ， B/S ， 异步， 回调，阻塞， 非阻塞，并行，分布式；</p>
+<p>6.思想：结构，控制，过程， 对象， 函数，声明， 原语， 集合， 组合， 抽象， 封装，复用，分层，模式，分治，缓存，中断，数学性质；</p>
+<p>7.算法：分治， 递归，动态规划， 时空权衡， 贪婪算法，优先级算法，迭代改进，深度遍历，广度遍历，问题转化；</p>
+<p>8.排序：插入排序， 选择排序，快速排序， 堆排序， 归并排序，基数排序，外部排序；</p>
+<p>9.搜索：顺序搜索， 二分搜索， 哈希搜索， 深度优先搜索，广度优先搜索，分段并行搜索；</p>
+<p>10.数据结构：位图，数组， 链表，栈，队列， 二叉树， 字符串， 哈希表，图；Json, XML, 记录，数据库； Key-Value 值对集合；非结构化存储。</p>
+<p>11.文本处理： find , grep,  awk,  sed, sort, cut, uniq, tr, ls, cat, xargs, 正则表达式；</p>
+<p>12.设计模式：工厂， 单例，原型， 模板，策略， 状态， 观察者， 中介者， 责任链， 组合， 命令， 代理，外观，适配器，装饰器，迭代器；</p>
+<ol start="13">
+<li>应用模式： WrapperFacade, Component Configurator, Interceptor, Extension Interface, Reactor, Proactor, Asyn Completion Token, Acceptor-Connector, Strategized Locking, Thread-Safe Interface, Double-Checked Locking Optimization, Active Object, Monitor Object, Half-Sync/Half-Async, Leader/Followers, Thread-Specific Storage ；参见《面向模式的软件架构：并发与联网对象模式》</li>
+</ol>
+<ol start="14">
+<li>进程与网络：ps(pstree),  top,  kill, crontab, ifconfig, ping, telnet, netstat, tcpdump, ssh, scp, wget, curl, Socket , HTTP ； 任务管理器 ；</li>
+</ol>
+<ol start="15">
+<li>开发框架： Servlet, Spring, Struts, ibatis , Hibernate,  Aop,  jQuery , Extjs, Bootstrap, Flex ；</li>
+</ol>
+<ol start="16">
+<li>常用组件：日志 ,  实用工具 (字符串, 日期, JSON/XML, HTTP, Email) , 签名校验，集合容器，模板引擎，并发库，图表(Highcharts)等 ；</li>
+</ol>
+<ol start="17">
+<li>运行容器： apacheHttp ,  tomcat,  jetty,  nginx ,  Docker，JVM, 浏览器，集群；</li>
+</ol>
+<p>18.中间件： Tair, Zookeeper, Dubbo,  数据库连接池，日志服务, 缓存, 定时任务，可靠消息服务，可靠心跳服务，工作流引擎, 负载均衡 ;</p>
+<p>19.软件架构： MVCDD (Model – View – Controller – Domain – DB) ；流水线，管道与过滤器； 事件驱动； 领域建模；以数据为中心的架构；</p>
+<p>20.测试技术： 质量风险分析，测试数据集， 测试用例，等价类划分， 分支覆盖， 域测试，正交表，决策表，状态转换图，边界测试， 空测试， 异常测试，漫游测试， 依赖Mock；单测；接口测试；集成测试；全链路压测；</p>
+<p>21.代码组织： 头文件， 类文件，包机制，名字空间；</p>
+<p>22.软件工程： 模块化， 封装，面向对象，用户故事，迭代开发，持续集成，单元测试，CodeReview，验收测试，持续交付；</p>
+<p>23 测量监控： 性能测量，time ，系统/接口/业务指标，错误报警；</p>
+<ol start="24">
+<li>学习资源：开源项目，公开课，论文，infoq,  stackoverflow , blogs， google ,  baidu；</li>
+</ol>
+<p>25.经典书籍：参见《计算机专业及软件开发推荐书籍》</p>
+
+        </div>
+         
+    <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+    
+      <!--
+        <div class="post-tool">
+        
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            
+        
+        </div>
+          -->
+          <div class="aligncenter">
+                
+                    <div class="post-tags">Tags：
+                        
+                        <a href="/tags/方法论/">方法论</a>
+                        
+                    </div>
+                
+          </div>
+
+         
+
+<div>
+ <br/>
+ 
+         <div class=" post-tags" style="float:left;font-size:15px;">
+                <a   href="/2018/04/01/effective_25列表优先于数组/" title="effective_25列表优先于数组">
+                           <i class="fa fa-chevron-left"></i>  <em>·</em> effective_25列表优先于数组
+                </a>
+         </div>
+ 
+        
+            <div class=" post-tags" style="float:right;font-size:15px;">
+                    <a class=" post-tags" style="float:right" href="/2018/03/11/effective_71慎用延迟初始化/" title="effective_71慎用延迟初始化">
+                        effective_71慎用延迟初始化  <em>·</em> <i class="fa fa-chevron-right"></i>
+                    </a>
+            </div>
+        
+
+</div>
+
+    </article>
+
+
+    
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div style="float:right;">
+   <i class="fa fa-question" aria-hidden="true"></i>
+   <span style='color:red;font-weight:bold;'>评论加载延迟属正常现象</span>
+</div>
+
+<div id="gitment-container"></div>
+<script type="text/javascript">
+    var gitment = new Gitment({
+        id: document.location.href,
+        owner: 'hotbain',
+        repo: 'day2up_comments',
+        oauth: {
+            client_id: 'c36e8df7a6f947e8e429',
+            client_secret: '1bd8694231b9c7f324d06d850415749253f6704f',
+        }
+    });
+    gitment.render('gitment-container');
+</script>
+
+
+</div>
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

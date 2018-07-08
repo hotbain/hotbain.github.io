@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-futuretask状态与超时时间设置_源码 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="FutureTask状态与超时时间设置_源码">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+
+
+<li><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" >2018寄语</a></li>
+
+<!--
+
+        <li><a href="/">首页</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/日进一步" data-name="学习">学习</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/诗词" data-name="诗词">诗词</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/base" data-name="基础">基础</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/algorithm" data-name="算法">算法</a>
+                </li>
+            
+        
+         <li >
+
+
+-->
+            <!--
+                    <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            -->
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+
+<script type="text/javascript">
+     
+</script>
+
+
+<div class="main-inner">
+    <article class="post animated slideInRight" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="http://xiaohuozi51.coding.me/" target="_blank">
+                    <img width="48" src="/images/avatar.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span >正</span>
+                   <!-- <a href="" target="_blank">正</a> -->
+                </p>
+                <p>不关注架构设计细节的程序员不是一个好架构师</p>
+            </div>
+            <h2 class="post-title">FutureTask状态与超时时间设置_源码</h2>
+            <div class="post-meta">
+             共<span style='color:blue'>3016</span>字 | 阅读<span id="busuanzi_value_page_pv" style='color:red'><i class="fa fa-spinner fa-spin"></i></span>次 | 创建于:<span title="最后编辑于2017/1222">2017/1222</span>
+            
+          
+
+                     <a href="/categories" target="_blank"><i class="fa fa-book"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_blank">日进一步</a>
+              
+              <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/源码/" target="_blank">源码</a>
+            
+                <em>·</em>
+                <a href="/tags/java/" target="_blank">java</a>
+            
+            
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true"title="代码"  style="font-size:22px;color:blue;"></div>
+            
+
+
+            </div>
+           
+        </div>
+         <!--
+        
+            <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+            
+         -->
+        
+                <p style='text-align:center;color:red;font-weight:bold;'>站点微信订阅号zhengjinyibu,欢迎大家搜索关注.</p>
+        
+        
+        
+        
+
+    
+        <div class="post-content markdown-body">
+            <blockquote>
+<p>线程池中使用FutureTask时候当拒绝策略为DiscardPolicy和 DiscardOldestPolicy的时候在被拒绝的任务的FutureTask对象上调用get()方法会导致调用线程一直阻塞，所以在日常开发中尽量使用带超时参数的get方法以避免线程一直阻塞，另外通过重写这些拒绝策略设置拒绝任务的状态也可以达到想要的效果。多线程下使用时候最好使用ThreadLocal对象</p>
+</blockquote>
+<h4 id="设置超时时间和设置FutureTask任务状态为结束状态即可"><a href="#设置超时时间和设置FutureTask任务状态为结束状态即可" class="headerlink" title="设置超时时间和设置FutureTask任务状态为结束状态即可"></a>设置超时时间和设置FutureTask任务状态为结束状态即可</h4><a id="more"></a>
+<blockquote>
+<p> 引用自: <a href="https://www.jianshu.com/p/a9f4f4478a00" target="_blank" rel="noopener">https://www.jianshu.com/p/a9f4f4478a00</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> book.base.thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FutureTaskTestDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> RejectedExecutionHandler futureTaskRejectPolicy= <span class="keyword">new</span> RejectedExecutionHandler() &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rejectedExecution</span><span class="params">(Runnable r, ThreadPoolExecutor executor)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!executor.isShutdown())&#123;</span><br><span class="line">			<span class="keyword">if</span>(r!=<span class="keyword">null</span> &amp;&amp; r <span class="keyword">instanceof</span>  FutureTask)&#123;</span><br><span class="line">				((FutureTask) r).cancel(<span class="keyword">true</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> RejectedExecutionHandler defaultPolicy=<span class="keyword">new</span> ThreadPoolExecutor.AbortPolicy()&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rejectedExecution</span><span class="params">(Runnable r, ThreadPoolExecutor e)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"发生了丢弃"</span> + r.getClass());</span><br><span class="line">		<span class="keyword">super</span>.rejectedExecution(r,e);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line"></span><br><span class="line">		ThreadPoolExecutor threadPoolExecutor = <span class="keyword">new</span> ThreadPoolExecutor(<span class="number">1</span>, <span class="number">1</span>,</span><br><span class="line">				<span class="number">0L</span>, TimeUnit.MILLISECONDS,</span><br><span class="line">				<span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;(<span class="number">1</span>),futureTaskRejectPolicy);</span><br><span class="line">		Future&lt;String&gt; firstFuture=threadPoolExecutor.submit(<span class="keyword">new</span> Callable&lt;String&gt;() &#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"first开始睡眠"</span>);</span><br><span class="line">				Thread.sleep(<span class="number">10000</span>);</span><br><span class="line">				System.out.println(<span class="string">"first睡醒了"</span>);</span><br><span class="line">				<span class="keyword">return</span> <span class="string">"first one"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">		Future&lt;String&gt; secondFuture=threadPoolExecutor.submit(<span class="keyword">new</span> Callable&lt;String&gt;() &#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"second开始睡眠"</span>);</span><br><span class="line"><span class="comment">//				Thread.sleep(5000);</span></span><br><span class="line">				System.out.println(<span class="string">"second睡醒了"</span>);</span><br><span class="line">				<span class="keyword">return</span> <span class="string">"second one"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		Future&lt;String&gt; thirdFuture=<span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			thirdFuture=threadPoolExecutor.submit(<span class="keyword">new</span> Callable&lt;String&gt;() &#123;</span><br><span class="line">				<span class="meta">@Override</span></span><br><span class="line">				<span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">					System.out.println(<span class="string">"third开始睡眠"</span>);</span><br><span class="line"><span class="comment">//				Thread.sleep(5000);</span></span><br><span class="line">					System.out.println(<span class="string">"third睡醒了"</span>);</span><br><span class="line">					<span class="keyword">return</span> <span class="string">"third one"</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line"></span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception ex)&#123;</span><br><span class="line">			ex.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.println(<span class="string">"first one 结果:"</span>+ firstFuture.get());</span><br><span class="line">		System.out.println(<span class="string">"second one 结果:"</span>+ secondFuture.get());</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			System.out.println(<span class="string">"third one 结果:"</span>+ (thirdFuture==<span class="keyword">null</span>?<span class="keyword">null</span>:thirdFuture.get()));</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception ex)&#123;</span><br><span class="line">			ex.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		threadPoolExecutor.shutdown();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">first开始睡眠</span><br><span class="line">first睡醒了</span><br><span class="line">first one 结果:first one</span><br><span class="line">second开始睡眠</span><br><span class="line">second睡醒了</span><br><span class="line">second one 结果:second one</span><br><span class="line">java.util.concurrent.CancellationException</span><br><span class="line">	at java.util.concurrent.FutureTask.report(FutureTask.java:<span class="number">121</span>)</span><br><span class="line">	at java.util.concurrent.FutureTask.get(FutureTask.java:<span class="number">192</span>)</span><br><span class="line">	at book.base.thread.FutureTaskTestDemo.main(FutureTaskTestDemo.java:<span class="number">73</span>)</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+         
+    <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+    
+      <!--
+        <div class="post-tool">
+        
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            
+        
+        </div>
+          -->
+          <div class="aligncenter">
+                
+                    <div class="post-tags">Tags：
+                        
+                        <a href="/tags/源码/">源码</a>
+                        
+                        <a href="/tags/java/">java</a>
+                        
+                    </div>
+                
+          </div>
+
+         
+<script type="text/javascript" >
+var jiathis_config={
+    summary:"",
+    showClose:true,
+    shortUrl:false,
+    hideMore:true
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r.gif&move=1" charset="utf-8"></script>
+
+
+
+<div>
+ <br/>
+ 
+         <div class=" post-tags" style="float:left;font-size:15px;">
+                <a   href="/2017/12/22/Java锁类型归类/" title="Java锁类型归类">
+                           <i class="fa fa-chevron-left"></i>  <em>·</em> Java锁类型归类
+                </a>
+         </div>
+ 
+        
+            <div class=" post-tags" style="float:right;font-size:15px;">
+                    <a class=" post-tags" style="float:right" href="/2017/12/20/mysql之整数类型的显示宽度/" title="mysql之整数类型的显示宽度">
+                        mysql之整数类型的显示宽度  <em>·</em> <i class="fa fa-chevron-right"></i>
+                    </a>
+            </div>
+        
+
+</div>
+
+    </article>
+
+
+    
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div style="float:right;">
+   <i class="fa fa-question" aria-hidden="true"></i>
+   <span style='color:red;font-weight:bold;'>评论加载延迟属正常现象</span>
+</div>
+
+<div id="gitment-container"></div>
+<script type="text/javascript">
+    var gitment = new Gitment({
+        id: document.location.href,
+        owner: 'hotbain',
+        repo: 'day2up_comments',
+        oauth: {
+            client_id: 'c36e8df7a6f947e8e429',
+            client_secret: '1bd8694231b9c7f324d06d850415749253f6704f',
+        }
+    });
+    gitment.render('gitment-container');
+</script>
+
+
+</div>
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

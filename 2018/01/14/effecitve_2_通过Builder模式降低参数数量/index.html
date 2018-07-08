@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-通过builder模式降低参数数量,增加可读性 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="通过Builder模式降低参数数量,增加可读性">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+
+
+<li><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" >2018寄语</a></li>
+
+<!--
+
+        <li><a href="/">首页</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/日进一步" data-name="学习">学习</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/诗词" data-name="诗词">诗词</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/base" data-name="基础">基础</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/algorithm" data-name="算法">算法</a>
+                </li>
+            
+        
+         <li >
+
+
+-->
+            <!--
+                    <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            -->
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+
+<script type="text/javascript">
+     
+</script>
+
+
+<div class="main-inner">
+    <article class="post animated slideInRight" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="http://xiaohuozi51.coding.me/" target="_blank">
+                    <img width="48" src="/images/avatar.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span >正</span>
+                   <!-- <a href="" target="_blank">正</a> -->
+                </p>
+                <p>不关注架构设计细节的程序员不是一个好架构师</p>
+            </div>
+            <h2 class="post-title">通过Builder模式降低参数数量,增加可读性</h2>
+            <div class="post-meta">
+             共<span style='color:blue'>4679</span>字 | 阅读<span id="busuanzi_value_page_pv" style='color:red'><i class="fa fa-spinner fa-spin"></i></span>次 | 创建于:<span title="最后编辑于2018/0114">2018/0114</span>
+            
+          
+
+                     <a href="/categories" target="_blank"><i class="fa fa-book"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_blank">java</a>
+              
+              <a href="/tags" target="_blank"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_blank">Effective_Java</a>
+            
+            
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true"title="代码"  style="font-size:22px;color:blue;"></div>
+            
+
+
+            </div>
+           
+        </div>
+         <!--
+        
+            <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+            
+         -->
+        
+                <p style='text-align:center;color:red;font-weight:bold;'>站点微信订阅号zhengjinyibu,欢迎大家搜索关注.</p>
+        
+        
+        
+        
+
+    
+        <div class="post-content markdown-body">
+            <p>参考：<a href="http://www.importnew.com/6605.html" target="_blank" rel="noopener">http://www.importnew.com/6605.html</a></p>
+<ul>
+<li><p>Builder会增加个类代码，这也意味着开发者在给类增加属性时有时会忘记给该属性添加支持的builder。为了克服这个问题，通常我会将builder嵌套到类中，这样可以很容易地发现哪个相关的builder需要更新</p>
+</li>
+<li><p>构建对象时，如果碰到类有很多参数——其中很多参数类型相同而且很多参数可以为空时，我更喜欢Builder模式来完成。当参数数量不多、类型不同而且都是必须出现时，通过增加代码实现Builder往往无法体现它的优势。在这种情况下，理想的方法是调用传统的构造函数。再者，如果不需要保持不变，那么就使用无参构造函数调用相应的set方法吧。</p>
+</li>
+<li><p>必要参数写到构造器里</p>
+</li>
+<li><p>如果要实现builder的重用性，可以讲初始化工作放到目标类中。不需要重用的话，可以讲初始化工作在builde创建出来的时候，就将实例创建出来。</p>
+</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> dustin.examples;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Person class used as part of too many parameters demonstration.</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Dustin</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String lastName;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String firstName;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String middleName;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String salutation;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String suffix;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String streetAddress;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String city;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> String state;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">boolean</span> isFemale;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">boolean</span> isEmployed;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">boolean</span> isHomewOwner;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newLastName,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newFirstName,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newMiddleName,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newSalutation,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newSuffix,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newStreetAddress,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newCity,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> String newState,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> <span class="keyword">boolean</span> newIsFemale,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> <span class="keyword">boolean</span> newIsEmployed,</span></span></span><br><span class="line"><span class="function"><span class="params">      <span class="keyword">final</span> <span class="keyword">boolean</span> newIsHomeOwner)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.lastName = newLastName;</span><br><span class="line">      <span class="keyword">this</span>.firstName = newFirstName;</span><br><span class="line">      <span class="keyword">this</span>.middleName = newMiddleName;</span><br><span class="line">      <span class="keyword">this</span>.salutation = newSalutation;</span><br><span class="line">      <span class="keyword">this</span>.suffix = newSuffix;</span><br><span class="line">      <span class="keyword">this</span>.streetAddress = newStreetAddress;</span><br><span class="line">      <span class="keyword">this</span>.city = newCity;</span><br><span class="line">      <span class="keyword">this</span>.state = newState;</span><br><span class="line">      <span class="keyword">this</span>.isFemale = newIsFemale;</span><br><span class="line">      <span class="keyword">this</span>.isEmployed = newIsEmployed;</span><br><span class="line">      <span class="keyword">this</span>.isHomewOwner = newIsHomeOwner;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">PersonBuilder</span></span></span><br><span class="line"><span class="class">   </span>&#123;</span><br><span class="line">      <span class="keyword">private</span> String nestedLastName;</span><br><span class="line">      <span class="keyword">private</span> String nestedFirstName;</span><br><span class="line">      <span class="keyword">private</span> String nestedMiddleName;</span><br><span class="line">      <span class="keyword">private</span> String nestedSalutation;</span><br><span class="line">      <span class="keyword">private</span> String nestedSuffix;</span><br><span class="line">      <span class="keyword">private</span> String nestedStreetAddress;</span><br><span class="line">      <span class="keyword">private</span> String nestedCity;</span><br><span class="line">      <span class="keyword">private</span> String nestedState;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">boolean</span> nestedIsFemale;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">boolean</span> nestedIsEmployed;</span><br><span class="line">      <span class="keyword">private</span> <span class="keyword">boolean</span> nestedIsHomeOwner;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="title">PersonBuilder</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">         <span class="keyword">final</span> String newFirstName,</span></span></span><br><span class="line"><span class="function"><span class="params">         <span class="keyword">final</span> String newCity,</span></span></span><br><span class="line"><span class="function"><span class="params">         <span class="keyword">final</span> String newState)</span> </span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedFirstName = newFirstName;</span><br><span class="line">         <span class="keyword">this</span>.nestedCity = newCity;</span><br><span class="line">         <span class="keyword">this</span>.nestedState = newState;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">lastName</span><span class="params">(String newLastName)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedLastName = newLastName;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">firstName</span><span class="params">(String newFirstName)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedFirstName = newFirstName;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">middleName</span><span class="params">(String newMiddleName)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedMiddleName = newMiddleName;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">salutation</span><span class="params">(String newSalutation)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedSalutation = newSalutation;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">suffix</span><span class="params">(String newSuffix)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedSuffix = newSuffix;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">streetAddress</span><span class="params">(String newStreetAddress)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedStreetAddress = newStreetAddress;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">city</span><span class="params">(String newCity)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedCity = newCity;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">state</span><span class="params">(String newState)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedState = newState;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">isFemale</span><span class="params">(<span class="keyword">boolean</span> newIsFemale)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedIsFemale = newIsFemale;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">isEmployed</span><span class="params">(<span class="keyword">boolean</span> newIsEmployed)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedIsEmployed = newIsEmployed;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> PersonBuilder <span class="title">isHomeOwner</span><span class="params">(<span class="keyword">boolean</span> newIsHomeOwner)</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">this</span>.nestedIsHomeOwner = newIsHomeOwner;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="function"><span class="keyword">public</span> Person <span class="title">createPerson</span><span class="params">()</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">new</span> Person(</span><br><span class="line">            nestedLastName, nestedFirstName, nestedMiddleName,</span><br><span class="line">            nestedSalutation, nestedSuffix,</span><br><span class="line">            nestedStreetAddress, nestedCity, nestedState,</span><br><span class="line">            nestedIsFemale, nestedIsEmployed, nestedIsHomeOwner);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+         
+    <p style='color:red;font-weight:bold;'>本文内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+    
+      <!--
+        <div class="post-tool">
+        
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+            
+        
+        </div>
+          -->
+          <div class="aligncenter">
+                
+                    <div class="post-tags">Tags：
+                        
+                        <a href="/tags/Effective-Java/">Effective_Java</a>
+                        
+                    </div>
+                
+          </div>
+
+         
+
+<div>
+ <br/>
+ 
+         <div class=" post-tags" style="float:left;font-size:15px;">
+                <a   href="/2018/01/14/effecitve_3_用私有构造器或者枚举强化Singleton属性/" title="用私有构造器或者枚举强化Singleton属性">
+                           <i class="fa fa-chevron-left"></i>  <em>·</em> 用私有构造器或者枚举强化Singleton属性
+                </a>
+         </div>
+ 
+        
+            <div class=" post-tags" style="float:right;font-size:15px;">
+                    <a class=" post-tags" style="float:right" href="/2018/01/13/effectice_4_通过私有构造器强化不可实例化的能力/" title="第4条_通过私有构造器强化不可实例化的能力">
+                        第4条_通过私有构造器强化不可实例化的能力  <em>·</em> <i class="fa fa-chevron-right"></i>
+                    </a>
+            </div>
+        
+
+</div>
+
+    </article>
+
+
+    
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div style="float:right;">
+   <i class="fa fa-question" aria-hidden="true"></i>
+   <span style='color:red;font-weight:bold;'>评论加载延迟属正常现象</span>
+</div>
+
+<div id="gitment-container"></div>
+<script type="text/javascript">
+    var gitment = new Gitment({
+        id: document.location.href,
+        owner: 'hotbain',
+        repo: 'day2up_comments',
+        oauth: {
+            client_id: 'c36e8df7a6f947e8e429',
+            client_secret: '1bd8694231b9c7f324d06d850415749253f6704f',
+        }
+    });
+    gitment.render('gitment-container');
+</script>
+
+
+</div>
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,1563 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-标签 - 学习 - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+         <li class="active"><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" " title="2018寄语">2018寄语</a></li>
+
+       <!--
+ 
+        <li class="">
+            <a href="/categories/日进一步" data-name="学习">学习</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/诗词" data-name="诗词">诗词</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/base" data-name="基础">基础</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/algorithm" data-name="算法">算法</a>
+        </li>
+        
+       -->
+         
+          <!--
+          <li >
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+             </li>
+          -->
+       
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/27/Group_By与分组过滤Having学习/" target="_blank" title="日进一步_Group_By与分组过滤Having学习"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/27/Group_By与分组过滤Having学习/" target="_self" title="日进一步_Group_By与分组过滤Having学习">日进一步_Group_By与分组过滤Having学习</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1227</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/sql/" target="_self">sql</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p><strong>WHERE过滤行，而HAVING过滤分组。HAVING支持所有WHERE操作符，HAVING子句中能使用聚集函数。WHERE在数据分组前进行过滤。HAVING在数据分组后进行过滤</strong><br><strong>where 可以单独用. having 必须跟group by一起用.</strong><br><strong>除聚集计算语句外，SELECT语句中的每个列都必须在GROUP BY子句中给出</strong><br><strong>当在查询中没有使用GROUP BY子句时，数据库就把数据表 中的所有行为作为一个组来处理</strong></p>
+</blockquote>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,<span class="keyword">count</span>(pno) <span class="keyword">from</span> sc <span class="keyword">where</span> grade&gt;=<span class="number">90</span> <span class="keyword">group</span> <span class="keyword">by</span> sno <span class="keyword">having</span> <span class="keyword">count</span>(pno)&gt;=<span class="number">2</span></span><br><span class="line"><span class="keyword">select</span> customer <span class="keyword">from</span> orders <span class="keyword">group</span> <span class="keyword">by</span> customer <span class="keyword">having</span> <span class="keyword">sum</span>(orderPrice)&lt;<span class="number">2000</span></span><br><span class="line"><span class="keyword">select</span> customer,<span class="keyword">sum</span>(orderPrice) <span class="keyword">from</span> orders <span class="keyword">where</span> customer <span class="keyword">in</span> (<span class="string">'Bush'</span>,<span class="string">'Adams'</span>) <span class="keyword">group</span> <span class="keyword">by</span> customer <span class="keyword">having</span> <span class="keyword">sum</span>(orderPrice)&gt;<span class="number">1500</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> from_unixtime(ctime,<span class="string">'%Y-%m-%d'</span>) <span class="keyword">as</span> dorderby,<span class="keyword">count</span>(ctime)  <span class="keyword">as</span> <span class="keyword">count</span></span><br><span class="line">         <span class="keyword">from</span> <span class="keyword">order</span></span><br><span class="line">         <span class="keyword">where</span> ctime &gt; <span class="number">1511712000</span> <span class="keyword">and</span> <span class="keyword">status</span> <span class="keyword">not</span> <span class="keyword">in</span> (<span class="number">3</span>,<span class="number">9</span>,<span class="number">18</span>,<span class="number">20</span>,<span class="number">30</span>) <span class="keyword">and</span> serv_type=<span class="number">0</span></span><br><span class="line">         <span class="keyword">group</span> <span class="keyword">by</span> from_unixtime(ctime,<span class="string">'%Y-%m-%d'</span>)</span><br><span class="line">         <span class="keyword">having</span> <span class="keyword">count</span>(ctime)&gt;<span class="number">150</span></span><br><span class="line">         <span class="keyword">order</span> <span class="keyword">by</span> dorderby <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> group by可以可以使用函数; 并且可以将这个参数应用到select中.<br> order by 使用的列的名字是对结果集和默认中选出来的.</p>
+</blockquote>
+       <!-- Group_By与分组过滤Having学习 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/24/网关接入与数据聚合缓存架构设计/" target="_blank" title="网关接入与数据聚合缓存架构设计图"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/24/网关接入与数据聚合缓存架构设计/" target="_self" title="网关接入与数据聚合缓存架构设计图">网关接入与数据聚合缓存架构设计图</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1224</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/高可用/" target="_self">高可用</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/架构设计/" target="_self">架构设计</a>
+            
+             
+
+            
+             <em>·</em><i class="fa fa-picture-o" aria-hidden="true" style="font-size:24px;color:red;"></i>
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+                <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:500px;" src="https://www.processon.com/embed/5a3fba0be4b0f622f2b11d87"></iframe>
+            
+
+
+     网关接入与数据聚合缓存架构设计
+       <!-- 网关接入与数据聚合缓存架构设计 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/23/高可用架构设计整理导图/" target="_blank" title="高可用架构设计整理导图"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/23/高可用架构设计整理导图/" target="_self" title="高可用架构设计整理导图">高可用架构设计整理导图</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1223</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/高可用/" target="_self">高可用</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/架构/" target="_self">架构</a>
+            
+                <em>·</em>
+                <a href="/tags/互联网/" target="_self">互联网</a>
+            
+                <em>·</em>
+                <a href="/tags/高可用/" target="_self">高可用</a>
+            
+                <em>·</em>
+                <a href="/tags/设计/" target="_self">设计</a>
+            
+             
+
+            
+             <em>·</em><i class="fa fa-picture-o" aria-hidden="true" style="font-size:24px;color:red;"></i>
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+                <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:800px;" src="https://www.processon.com/embed/mind/5a3e51aae4b07c8d89468c2d"></iframe>
+            
+
+
+     高可用架构设计整理导图
+       <!-- 高可用架构设计整理导图 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/23/互联网解耦架构常用场景/" target="_blank" title="互联网解耦架构常用场景"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/23/互联网解耦架构常用场景/" target="_self" title="互联网解耦架构常用场景">互联网解耦架构常用场景</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1223</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/互联网技术/" target="_self">互联网技术</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/解耦/" target="_self">解耦</a>
+            
+                <em>·</em>
+                <a href="/tags/互联网/" target="_self">互联网</a>
+            
+             
+
+            
+             <em>·</em><i class="fa fa-picture-o" aria-hidden="true" style="font-size:24px;color:red;"></i>
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+                <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="https://www.processon.com/embed/mind/5a3e3e7de4b0ce9ffea8b5b6"></iframe>
+            
+
+
+     互联网解耦架构常用场景
+       <!-- 互联网解耦架构常用场景 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/23/Java垃圾收集整理导图/" target="_blank" title="Java垃圾收集整理导图"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/23/Java垃圾收集整理导图/" target="_self" title="Java垃圾收集整理导图">Java垃圾收集整理导图</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1223</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/垃圾收集/" target="_self">垃圾收集</a>
+            
+             
+
+            
+             <em>·</em><i class="fa fa-picture-o" aria-hidden="true" style="font-size:24px;color:red;"></i>
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+                <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="https://www.processon.com/embed/mind/5a3df933e4b0909c1aa0f874"></iframe>
+            
+
+
+     Java垃圾收集整理导图
+       <!-- Java垃圾收集整理导图 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/23/ACID依赖关系图/" target="_blank" title="ACID依赖关系图"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/23/ACID依赖关系图/" target="_self" title="ACID依赖关系图">ACID依赖关系图</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1223</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/ACID/" target="_self">ACID</a>
+            
+             
+
+            
+             <em>·</em><i class="fa fa-picture-o" aria-hidden="true" style="font-size:24px;color:red;"></i>
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+                <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:500px;" src="https://www.processon.com/embed/5a2bd9c4e4b04afbe274d601"></iframe>
+            
+
+
+     <h3 id="ACID依赖关系图"><a href="#ACID依赖关系图" class="headerlink" title="ACID依赖关系图"></a>ACID依赖关系图</h3>
+       <!-- ACID依赖关系图 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/22/Java锁类型归类/" target="_blank" title="Java锁类型归类"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/22/Java锁类型归类/" target="_self" title="Java锁类型归类">Java锁类型归类</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1222</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/高并发/" target="_self">高并发</a>
+            
+                <em>·</em>
+                <a href="/tags/java/" target="_self">java</a>
+            
+                <em>·</em>
+                <a href="/tags/juc/" target="_self">juc</a>
+            
+             
+
+            
+             <em>·</em><i class="fa fa-picture-o" aria-hidden="true" style="font-size:24px;color:red;"></i>
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+                <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:500px;" src="https://www.processon.com/embed/mind/5a3d187de4b0f622f2ae8c20"></iframe>
+            
+
+
+     <h3 id="Java锁类型归类"><a href="#Java锁类型归类" class="headerlink" title="Java锁类型归类"></a>Java锁类型归类</h3>
+       <!-- Java锁类型归类 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/20/mysql之整数类型的显示宽度/" target="_blank" title="mysql之整数类型的显示宽度"
+           style="background-image:url(/images/database.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/20/mysql之整数类型的显示宽度/" target="_self" title="mysql之整数类型的显示宽度">mysql之整数类型的显示宽度</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1220</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/mysql/" target="_self">mysql</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<ol>
+<li>M和数据类型的取值范围是无关的</li>
+<li>M只是指明MYSQL最大可能显示的数字个数，数值的位数小于M时会有空格填充;大于M时，只要该值不超过该类型整数的取值范围，数值依然可以插入，而且能显示出来</li>
+<li>M的效果需要配合zerofill使用</li>
+</ol>
+</blockquote>
+       <!-- mysql之整数类型的显示宽度 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/16/docker命令/" target="_blank" title="docker命令"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/16/docker命令/" target="_self" title="docker命令">docker命令</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1216</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/虚拟化/" target="_self">虚拟化</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/虚拟化/" target="_self">虚拟化</a>
+            
+             
+             <em>·</em><div class="fa fa-git" title="含有Git库" style="font-size:24px;color:black;"></div>
+            
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+            <div>
+                <div class="github-widget" data-repo="oracle/docker-images"></div>
+            </div>
+        
+        
+         
+
+
+     <h3 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h3><p>创建容器</p>
+<blockquote>
+<p>docker create</p>
+</blockquote>
+<p>创建并运行</p>
+<blockquote>
+<p>docker run</p>
+</blockquote>
+       <!-- docker命令 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/16/foreach的集合为null会抛出异常/" target="_blank" title="foreach的集合为null会抛出异常"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/16/foreach的集合为null会抛出异常/" target="_self" title="foreach的集合为null会抛出异常">foreach的集合为null会抛出异常</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1216</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/Java基础/" target="_self">Java基础</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>##foreach的集合为null,会抛出异常</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> List&lt;String&gt; arr  = Lists.newArrayList(<span class="string">"112"</span>);</span><br><span class="line">        <span class="comment">//iterator 不会报出异常; 遍历 倒是可以</span></span><br><span class="line">        <span class="keyword">for</span>(String str: arr)&#123;</span><br><span class="line"><span class="comment">//            arr.remove(0);</span></span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; arr2  = <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">//报出空指针异常</span></span><br><span class="line">        <span class="keyword">for</span>(String str: arr2)&#123;</span><br><span class="line">        	<span class="comment">//iterator 不会异常; foreach会异常</span></span><br><span class="line"><span class="comment">//            arr.remove(0);</span></span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+       <!-- foreach的集合为null会抛出异常 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/13/多项目多特性分支管理/" target="_blank" title="多项目多特性分支管理"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/13/多项目多特性分支管理/" target="_self" title="多项目多特性分支管理">多项目多特性分支管理</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1213</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/git/" target="_self">git</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p><img src="http://on-img.com/chart_image/5a314cd5e4b04cc30ddc3dd3.png" alt="多项目多特性分支管理"><br>
+       <!-- 多项目多特性分支管理 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/09/Mysql_innodb_flush_log_at_trx_commit_Redo日志保证/" target="_blank" title="Mysql_innodb_flush_log_at_trx_commit_Redo日志保证"
+           style="background-image:url(/images/database.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/09/Mysql_innodb_flush_log_at_trx_commit_Redo日志保证/" target="_self" title="Mysql_innodb_flush_log_at_trx_commit_Redo日志保证">Mysql_innodb_flush_log_at_trx_commit_Redo日志保证</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1209</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/mysql/" target="_self">mysql</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     Mysql_innodb_flush_log_at_trx_commit_Redo日志保证
+       <!-- Mysql_innodb_flush_log_at_trx_commit_Redo日志保证 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/09/数据库ACID依赖关系/" target="_blank" title="数据库ACID依赖关系"
+           style="background-image:url(/images/database.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/09/数据库ACID依赖关系/" target="_self" title="数据库ACID依赖关系">数据库ACID依赖关系</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1209</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/数据库/" target="_self">数据库</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/数据库/" target="_self">数据库</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>引用自:<a href="https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ</a></p>
+</blockquote>
+<p><img src="http://on-img.com/chart_image/5a2bd9c5e4b04afbe274d604.png" alt="数据库ACID依赖图"><br>
+       <!-- 数据库ACID依赖关系 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/09/单机数据库原理_一致性/" target="_blank" title="单机数据库原理_一致性"
+           style="background-image:url(/images/database.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/09/单机数据库原理_一致性/" target="_self" title="单机数据库原理_一致性">单机数据库原理_一致性</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1209</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/数据库/" target="_self">数据库</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>引用自:<a href="https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ</a><br>processon: <a href="https://www.processon.com/view/link/5a2b66e4e4b0eec950916a88" target="_blank" rel="noopener">https://www.processon.com/view/link/5a2b66e4e4b0eec950916a88</a></p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20171209132936375?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="单机数据库原理_一致性"><br>
+       <!-- 单机数据库原理_一致性 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/09/单机数据库原理_持久性/" target="_blank" title="单机数据库原理_持久性"
+           style="background-image:url(/images/database.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/09/单机数据库原理_持久性/" target="_self" title="单机数据库原理_持久性">单机数据库原理_持久性</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1209</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/数据库/" target="_self">数据库</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>引用自:<a href="https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ</a><br>processon: <a href="https://www.processon.com/view/link/5a2b66e4e4b0eec950916a88" target="_blank" rel="noopener">https://www.processon.com/view/link/5a2b66e4e4b0eec950916a88</a></p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20171209125556075?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="单机数据库原理_持久性"><br>
+       <!-- 单机数据库原理_持久性 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/09/单机数据库原理_原子性/" target="_blank" title="单机数据库原理_原子性"
+           style="background-image:url(/images/database.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/09/单机数据库原理_原子性/" target="_self" title="单机数据库原理_原子性">单机数据库原理_原子性</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1209</span>
+
+            
+                 <span style="font-size:12px;"><i style="font-size:20px;color:green;" class="fa fa-weixin"></i></span>
+                    <em>·</em>
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/日进一步/" target="_self">日进一步</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/数据库/" target="_self">数据库</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>引用自:<a href="https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/2JbhKAUxE1c4Cw7KXaGMvQ</a><br>processon: <a href="https://www.processon.com/view/link/5a2b66e4e4b0eec950916a88" target="_blank" rel="noopener">https://www.processon.com/view/link/5a2b66e4e4b0eec950916a88</a></p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20171209122502672?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG90YmFpbjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>
+       <!-- 单机数据库原理_原子性 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/07/Redis_String讲解/" target="_blank" title="Redis_String讲解"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/07/Redis_String讲解/" target="_self" title="Redis_String讲解">Redis_String讲解</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/nosql/" target="_self">nosql</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/redis/" target="_self">redis</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用: <a href="https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg</a></p>
+<h4 id="redis-特点"><a href="#redis-特点" class="headerlink" title="redis 特点"></a>redis 特点</h4><blockquote>
+<ol>
+<li>所有数据存储在内存中，高速读写</li>
+<li>提供丰富多样的数据类型：string、 hash、 set、 sorted set、bitmap、hyperloglog</li>
+<li>提供了 AOF 和 RDB 两种数据的持久化保存方式，保证了 Redis 重启后数据不丢失</li>
+<li>Redis 的所有操作都是原子性的，还支持对几个操作合并后的原子性操作，支持事务</li>
+</ol>
+</blockquote>
+<p>string 类型是 Redis 中最基本的数据类型，最常用的数据类型，甚至被很多玩家当成 redis 唯一的数据类型去使用。string 类型在 redis 中是二进制安全 (binary safe) 的, 这意味着 string 值关心二进制的字符串，不关心具体格式，你可以<strong>用它存储 json 格式或 JPEG 图片格式的字符串</strong>。</p>
+       <!-- Redis_String讲解 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/07/Redis_Hash讲解/" target="_blank" title="Redis_Hash讲解"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/07/Redis_Hash讲解/" target="_self" title="Redis_Hash讲解">Redis_Hash讲解</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/nosql/" target="_self">nosql</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/redis/" target="_self">redis</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用: <a href="https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//同时设置多个字段值</span></span><br><span class="line">hmset user:<span class="number">2</span> name beijing email struggle@<span class="number">126</span>.com</span><br><span class="line"><span class="comment">//得到所有的值</span></span><br><span class="line">HGETALL runoobkey</span><br><span class="line"><span class="comment">//删除key中的字段</span></span><br><span class="line">HDEL key field</span><br><span class="line"><span class="comment">//为哈希表 key 中的指定字段的整数值加上增量 increment 。</span></span><br><span class="line">HINCRBY key field increment </span><br><span class="line"></span><br><span class="line">HMGET key field1 [field2] </span><br><span class="line">获取所有给定字段的值</span><br><span class="line">HMSET key field1 value1 [field2 value2 ] </span><br><span class="line">同时将多个 field-value (域-值)对设置到哈希表 key 中。</span><br></pre></td></tr></table></figure>
+       <!-- Redis_Hash讲解 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/07/Redis_List讲解/" target="_blank" title="Redis_List讲解"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/07/Redis_List讲解/" target="_self" title="Redis_List讲解">Redis_List讲解</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/nosql/" target="_self">nosql</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/redis/" target="_self">redis</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用自:<a href="https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg</a></p>
+<blockquote>
+<p>list 是按照插入顺序排序的字符串链表，可以在头部和尾部插入新的元素（双向链表实现，两端添加元素的时间复杂度为 O(1)）。插入元素时，如果 key 不存在，redis 会为该 key 创建一个新的链表，如果链表中所有的元素都被移除，该 key 也会从 redis 中移除。</p>
+</blockquote>
+<p>常见操作时用 lpush 命令在 list 头部插入元素， 用 rpop 命令在 list 尾取出数据。<br>blpush;lrpop; 分别都是阻塞版本,可以设置超时时间.<br><strong>如果有多个客户端同时因为某个列表而被阻塞，那么当有新值被推入到这个列表时，服务器就会按照先到先服务原则，优先向最早被阻塞的客户端返回新值。</strong></p>
+       <!-- Redis_List讲解 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2017/12/07/Redis_Set讲解/" target="_blank" title="Redis_Set讲解"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2017/12/07/Redis_Set讲解/" target="_self" title="Redis_Set讲解">Redis_Set讲解</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2017/1207</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/nosql/" target="_self">nosql</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/学习/" target="_self">学习</a>
+            
+                <em>·</em>
+                <a href="/tags/redis/" target="_self">redis</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>引用自:<a href="https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/65jTyTK7Pj5Yc4ddPZBHEg</a></p>
+<blockquote>
+<p>set 数据类型是一个集合（没有排序，不重复），可以对 set 类型的数据进行添加、删除、判断是否存在等操作（时间复杂度是 O(1) ） </p>
+<p>set 集合不允许数据重复，如果添加的数据在 set 中已经存在，将只保留一份。</p>
+<p>set 类型提供了多个 set 之间的聚合运算，如求交集、并集、补集，这些操作在 redis 内部完成，效率很高。<br>共同好友;共同文章</p>
+</blockquote>
+       <!-- Redis_Set讲解 -->
+    </div>
+
+</article>
+
+
+
+    
+</div>
+<!-- 分页开始 -->
+
+<div id="btn-pager">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/tags/学习/page/2/">2</a><a class="extend next" rel="next" href="/tags/学习/page/2/">Next</a>
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>

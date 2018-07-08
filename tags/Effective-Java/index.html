@@ -1,0 +1,1510 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<!--
+不关注架构设计细节的程序员不是一个好架构师
+-->
+<head>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://hotbain.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://hotbain.github.io">
+<meta name="author" content="正进一步">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/SimpleStyle.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>正进一步-标签 - effective_java - </title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="趁着年轻,多做点事儿">
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+      
+       <!--
+  <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+              
+ <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+        </a>
+
+ <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+
+
+       -->
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/me" title="关于我">
+            <i class="fa fa-address-card"></i>
+            <span>关于我</span>
+        </a>
+        
+        
+        <a href="/lesson/index" title="java高级课程">
+            <i class="fa fa-book"></i>
+            <span>java高级课程</span>
+        </a>
+        
+        
+        <a href="/help" title="帮助文档">
+            <i class="fa fa-question"></i>
+            <span>帮助文档</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+   <!--
+ <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+   -->
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover" class="">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <img class="avatar" width="72" src="/images/favicon.png" alt="avatar"/>
+        
+        <h1 class="cover-siteName">正进一步</h1>
+        <h3 class="cover-siteTitle">只有喜欢,才会全情投入,才会成功!!!</h3>
+        <p class="cover-siteDesc">不关注架构设计细节的程序员不是一个好架构师</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/hotbain" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+         <li class="active"><a href="/" data-name="Home" title="Back Home">Home</a></li>
+        <li><a href="/tags" data-name="Tag Cloud" title="Tag Cloud">Tags</a></li>
+        <li><a href="/categories" data-name="Categories" title="Categories">Categories</a></li>
+        <li><a href="/archives" data-name="Archives" title="Archives">Archives</a></li>
+        <li><a href="/2018/hope" " title="2018寄语">2018寄语</a></li>
+
+       <!--
+ 
+        <li class="">
+            <a href="/categories/日进一步" data-name="学习">学习</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/诗词" data-name="诗词">诗词</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/virtualization" data-name="虚拟化">虚拟化</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/base" data-name="基础">基础</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/algorithm" data-name="算法">算法</a>
+        </li>
+        
+       -->
+         
+          <!--
+          <li >
+              <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+             </li>
+          -->
+       
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">Type in category/tag/post keyword</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="Type in category/tag/post keyword" />
+        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container animated slideInRight">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/07/20/68_Executor和Task优先于线程0/" target="_blank" title="111"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/07/20/68_Executor和Task优先于线程0/" target="_self" title="111">111</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0720</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <ul>
+<li>Thread抛出异常就死亡了。但是线程池却会生成一个新的线程</li>
+</ul>
+<iframe src="https://www.processon.com/embed/mind/5a634114e4b0abe85d649b16" width="100%" height="700px" frameborder="0" allowfullscreen></iframe>
+       <!-- 68_Executor和Task优先于线程 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/04/01/effective_25列表优先于数组/" target="_blank" title="effective_25列表优先于数组"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/04/01/effective_25列表优先于数组/" target="_self" title="effective_25列表优先于数组">effective_25列表优先于数组</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0401</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     effective_25列表优先于数组
+       <!-- effective_25列表优先于数组 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/11/effective_52通过接口引用对象/" target="_blank" title="effective_52通过接口引用对象"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/11/effective_52通过接口引用对象/" target="_self" title="effective_52通过接口引用对象">effective_52通过接口引用对象</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0311</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>尽量使用接口引用对象</p>
+</blockquote>
+<p>不用接口引用的情况:</p>
+<blockquote>
+<p>没有合适的接口的情况。例如: 值类型，String和StringBuilder,Random。通常是final类型.<br>如果程序依赖于实现了某个接口的类的额外方法，例如LinkedHashMap</p>
+</blockquote>
+       <!-- effective_52通过接口引用对象 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/11/effective_51_当心字符串连接的性能/" target="_blank" title="effective_51_当心字符串连接的性能"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/11/effective_51_当心字符串连接的性能/" target="_self" title="effective_51_当心字符串连接的性能">effective_51_当心字符串连接的性能</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0311</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>不要使用字符串连接操作符来合并多个字符串，除非性能无关紧要。相反，应该使用StringBuilder的append方法。另一种方法是，使用字符数组，或者每次只处理一个字符串，而不是将它们组合起来。<br>以为字符串的不可变，当两个字符串连接在一起时，他们的内容就会被拷贝</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder b = <span class="keyword">new</span> StringBuilder(numItems() * LINE_WIDTH);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numItem(); i++)&#123;</span><br><span class="line">    b.append(lineForItem(i));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> b.toString();</span><br></pre></td></tr></table></figure>
+       <!-- effective_51_当心字符串连接的性能 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/11/effective_71慎用延迟初始化/" target="_blank" title="effective_71慎用延迟初始化"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/11/effective_71慎用延迟初始化/" target="_self" title="effective_71慎用延迟初始化">effective_71慎用延迟初始化</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0311</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     effective_71慎用延迟初始化
+       <!-- effective_71慎用延迟初始化 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/10/effective_49基本类型优先于装箱基本类型/" target="_blank" title="effective_49基本类型优先于装箱基本类型"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/10/effective_49基本类型优先于装箱基本类型/" target="_self" title="effective_49基本类型优先于装箱基本类型">effective_49基本类型优先于装箱基本类型</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0310</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="知识"><a href="#知识" class="headerlink" title="知识:"></a>知识:</h3><blockquote>
+<p>当程序进行涉及到装箱和拆箱基本类型和混合类型计算时，会进行拆箱</p>
+</blockquote>
+<p>基本类型和装箱基本类型之间的三个主要区别：</p>
+<p>1.基本类型只有值，而装箱基本类型具有与它们的值不同的同一性（两个装箱基本类型可以具有相同的值和不同的同一性）</p>
+<p>2.基本类型只有功能完备的值，而每个装箱基本类型除了它对应的基本类型的所有功能值之外，还有个非功能值：null</p>
+<p>3.基本类型通常比装箱基本类型更节省空间和时间。</p>
+<p>适合使用装箱基本类型的地方：</p>
+<p>1.作为集合中的元素，键和值。</p>
+<p>2.在参数化类型中，必须使用装箱基本类型作为类型参数。</p>
+<p>3.在进行反射方法调用时，必须使用装箱基本类型。</p>
+       <!-- effective_49基本类型优先于装箱基本类型 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/10/effective_46_foreach循环优先于传统的for循环/" target="_blank" title="effective_46_foreach循环优先于传统的for循环"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/10/effective_46_foreach循环优先于传统的for循环/" target="_self" title="effective_46_foreach循环优先于传统的for循环">effective_46_foreach循环优先于传统的for循环</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0310</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>foreach可以遍历iterable接口<br>foreach循环在简洁性与预防bug方面有着传统的for循环无法比拟的优势.</p>
+</blockquote>
+<p>除了一下情况:</p>
+<blockquote>
+<p>过滤- 将删除特定元素remove方法<br>转换- 使用列表迭代器或者数组索引，以便设定元素的值<br>平行迭代- 如果并行遍历多个集合，就需要显示的控制迭代器和索引变量</p>
+</blockquote>
+       <!-- effective_46_foreach循环优先于传统的for循环 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/03/10/effective_45_将局部变量的作用域最小化/" target="_blank" title="effective_45_将局部变量的作用域最小化"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/03/10/effective_45_将局部变量的作用域最小化/" target="_self" title="effective_45_将局部变量的作用域最小化">effective_45_将局部变量的作用域最小化</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0310</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p><a href="http://blog.csdn.net/zhtzyh2012/article/details/46675065" target="_blank" rel="noopener">http://blog.csdn.net/zhtzyh2012/article/details/46675065</a></p>
+<blockquote>
+<p>循环提供特殊机会将变量作用域最小化.(无论传统for,还foreach).for循环,都允许声明循环变量,它们的作用域被限定在正好的作用范围之内.(范围包括循环体,以及循环体之前的初始化,测试,更新).如果循环终止之后不再需要循环变量内容,for循环优于while循环.<br>几乎每个局部变量的声明都应该包含一个初始化表达式.如果没有足够信息来对一个变量进行有意义的初始化,就应该推迟这个声明,直到可以初始化为止.例外情况是与try..catch有关.<br>for循环比while循环另外优势:更简短,增加可读性.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">              Class&lt;?&gt;cl = <span class="keyword">null</span>;</span><br><span class="line">              <span class="keyword">try</span>&#123;</span><br><span class="line">                     cl= Class.forName(args[<span class="number">0</span>]);</span><br><span class="line">              &#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">                     System.err.println(<span class="string">"Classnot find"</span>);</span><br><span class="line">                     System.exit(<span class="number">1</span>);</span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+       <!-- effective_45_将局部变量的作用域最小化 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/04/43返回零长度的数组或集合,而不是null/" target="_blank" title="43返回零长度的数组或集合,而不是null"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/04/43返回零长度的数组或集合,而不是null/" target="_self" title="43返回零长度的数组或集合,而不是null">43返回零长度的数组或集合,而不是null</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0204</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <blockquote>
+<p>Collections.emptyList().toArray(new Person[0]);</p>
+</blockquote>
+<h4 id="此处可以参考阿里Java编程规范手册"><a href="#此处可以参考阿里Java编程规范手册" class="headerlink" title="此处可以参考阿里Java编程规范手册"></a>此处可以参考阿里Java编程规范手册</h4><blockquote>
+<p>使用toArray带参方法，入参分配的数组空间不够大时，toArray方法内部将重新分配内存空间，并返回新数组地址；如果数组元素大于实际所需，下标为[ list.size() ]的数组元素将被置为null，其它数组元素保持原值，因此最好将方法入参数组大小定义与集合元素个数一致。</p>
+</blockquote>
+<blockquote>
+<p>Collections.emptyList()</p>
+</blockquote>
+       <!-- 43返回零长度的数组或集合,而不是null -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/04/effective_36_坚持使用Override注解/" target="_blank" title="36坚持使用Override注解"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/04/effective_36_坚持使用Override注解/" target="_self" title="36坚持使用Override注解">36坚持使用Override注解</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0204</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="Override注解方法，防止出错"><a href="#Override注解方法，防止出错" class="headerlink" title="Override注解方法，防止出错."></a>Override注解方法，防止出错.</h3><h3 id="IDE的代码检测-也可以起到该作用"><a href="#IDE的代码检测-也可以起到该作用" class="headerlink" title="IDE的代码检测 也可以起到该作用"></a>IDE的代码检测 也可以起到该作用</h3>
+       <!-- 36坚持使用Override注解 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/04/effective_34用接口模拟可伸缩的枚举/" target="_blank" title="34用接口模拟可伸缩的枚举"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/04/effective_34用接口模拟可伸缩的枚举/" target="_self" title="34用接口模拟可伸缩的枚举">34用接口模拟可伸缩的枚举</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0204</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="枚举不能继承"><a href="#枚举不能继承" class="headerlink" title="枚举不能继承."></a>枚举不能继承.</h3>
+       <!-- 34用接口模拟可伸缩的枚举 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/04/effective_33用EnumMap代替序数索引/" target="_blank" title="33用EnumMap代替序数索引"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/04/effective_33用EnumMap代替序数索引/" target="_self" title="33用EnumMap代替序数索引">33用EnumMap代替序数索引</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0204</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="最好不要用序数来索引数组，而要使用EnumMap"><a href="#最好不要用序数来索引数组，而要使用EnumMap" class="headerlink" title="最好不要用序数来索引数组，而要使用EnumMap"></a>最好不要用序数来索引数组，而要使用EnumMap</h3><p><code>EnumMap源代码学习</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> V <span class="title">put</span><span class="params">(K key, V value)</span> </span>&#123;</span><br><span class="line">        typeCheck(key);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> index = key.ordinal();</span><br><span class="line">        Object oldValue = vals[index];</span><br><span class="line">        vals[index] = maskNull(value);</span><br><span class="line">        <span class="keyword">if</span> (oldValue == <span class="keyword">null</span>)</span><br><span class="line">            size++;</span><br><span class="line">        <span class="keyword">return</span> unmaskNull(oldValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> V <span class="title">remove</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isValidKey(key))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> index = ((Enum&lt;?&gt;)key).ordinal();</span><br><span class="line">        Object oldValue = vals[index];</span><br><span class="line">        vals[index] = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (oldValue != <span class="keyword">null</span>)</span><br><span class="line">            size--;</span><br><span class="line">        <span class="keyword">return</span> unmaskNull(oldValue);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> V <span class="title">get</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (isValidKey(key) ?</span><br><span class="line">                unmaskNull(vals[((Enum&lt;?&gt;)key).ordinal()]) : <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsKey</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> isValidKey(key) &amp;&amp; vals[((Enum&lt;?&gt;)key).ordinal()] != <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+       <!-- 33用EnumMap代替序数索引 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/03/effective_32_用Enumset代替位域/" target="_blank" title="32用Enumset代替位域"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/03/effective_32_用Enumset代替位域/" target="_self" title="32用Enumset代替位域">32用Enumset代替位域</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0203</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="当Enum多用于集合判断的时候，可以使用这种方式"><a href="#当Enum多用于集合判断的时候，可以使用这种方式" class="headerlink" title="当Enum多用于集合判断的时候，可以使用这种方式"></a>当Enum多用于集合判断的时候，可以使用这种方式</h3><h3 id="位域-不利于-判别。-也不利于理解。"><a href="#位域-不利于-判别。-也不利于理解。" class="headerlink" title="位域 不利于 判别。 也不利于理解。"></a>位域 不利于 判别。 也不利于理解。</h3><h3 id="Enum却利于判断"><a href="#Enum却利于判断" class="headerlink" title="Enum却利于判断"></a>Enum却利于判断</h3><p><code>enumSet源代码学习</code></p>
+       <!-- 32用Enumset代替位域 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/03/effective_31_用实例域代替序数/" target="_blank" title="31用实例域代替序数"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/03/effective_31_用实例域代替序数/" target="_self" title="31用实例域代替序数">31用实例域代替序数</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0203</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h3 id="一旦修改了枚举常量的顺序，后续的维护将是一场噩梦"><a href="#一旦修改了枚举常量的顺序，后续的维护将是一场噩梦" class="headerlink" title="一旦修改了枚举常量的顺序，后续的维护将是一场噩梦."></a>一旦修改了枚举常量的顺序，后续的维护将是一场噩梦.</h3>
+       <!-- 31用实例域代替序数 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/02/kafka_1_消费者消费模式/" target="_blank" title="21用函数对象表示策略"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/02/kafka_1_消费者消费模式/" target="_self" title="21用函数对象表示策略">21用函数对象表示策略</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0202</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>实现函数对象的几种方式:</p>
+<blockquote>
+<ul>
+<li>C语言的函数指针</li>
+<li>lambda表达式</li>
+<li>函数式接口</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>函数对象主要用于策略模式.只用一次的话，使用匿名内部类；多次使用的话，可以导出成一个成员域(static final修饰)</p>
+</blockquote>
+<p>实例:<br>java.util.Comparator<string><br>
+       <!-- 21 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/02/effectice_21_用函数对象表示策略/" target="_blank" title="21用函数对象表示策略"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/02/effectice_21_用函数对象表示策略/" target="_self" title="21用函数对象表示策略">21用函数对象表示策略</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0202</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>实现函数对象的几种方式:</p>
+<blockquote>
+<ul>
+<li>C语言的函数指针</li>
+<li>lambda表达式</li>
+<li>函数式接口</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>函数对象主要用于策略模式.只用一次的话，使用匿名内部类；多次使用的话，可以导出成一个成员域(static final修饰)</p>
+</blockquote>
+<p>实例:<br>java.util.Comparator<string><br>
+       <!-- 21 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/02/01/effectice_19_接口只用于定义类型/" target="_blank" title="19接口只用于定义类型"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/02/01/effectice_19_接口只用于定义类型/" target="_self" title="19接口只用于定义类型">19接口只用于定义类型</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0201</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <p>当类实现接口时 ，接口就充当可以引用这个类的实例的类型（type）。因此，类实现了接口，就表明客户端可以对这个类的实例实施某些动作。为了任何其他目的而定义接口是不恰当的。</p>
+<blockquote>
+<p>有一种接口被称为常量接口（constant interface），它不满足上述条件。这种接口没有方法，只有静态final域。常量接口模式是对接口的不良使用。这样做不仅会暴露该类的实现细节到导出API中，还会产生一个更糟糕的情况。就是在将来的发行版中，如果类不再需要使用这些常量，它依然必须实现这个接口，以确保二进制兼容性。如果非final类实现了常量接口，它的所有子类的命名空间也会被接口中的常量所“污染”。</p>
+</blockquote>
+<h4 id="反例"><a href="#反例" class="headerlink" title="反例"></a>反例</h4><blockquote>
+<p>Java平台类库中有几个常量接口，例如java.io.ObjectStreamConstants。这些接口应该被认为是反面的典型，不值得效仿。</p>
+</blockquote>
+<h4 id="方案。"><a href="#方案。" class="headerlink" title="方案。"></a>方案。</h4><blockquote>
+<p>1.如果常量与某个现有类或接口紧密相关，就应该把这些常量添加到这个类或接口中。</p>
+</blockquote>
+<blockquote>
+<p>2.如果这些常量可以被看作枚举类型的成员，就应该用枚举类型(enum type)。</p>
+</blockquote>
+<blockquote>
+<p>3.用不可实例化的工具类（ utility class）。使用静态导入(import static)避免常量修饰.</p>
+</blockquote>
+       <!-- 19接口只用于定义类型 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/23/慎用可变参数/" target="_blank" title="慎用可变参数"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/23/慎用可变参数/" target="_self" title="慎用可变参数">慎用可变参数</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0123</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <ul>
+<li>至少传递一个</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> &lt;E&gt; <span class="function"><span class="keyword">void</span> <span class="title">varargs</span><span class="params">(Object obj,E...varargs)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(E  e : varargs)&#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>泛型编程只能接受引用类型</p>
+</li>
+<li><p>打印数组tostring，会导致没有意义的字符结果</p>
+</li>
+<li><p>可变参数每次调用都会导致有一次数组分配和初始化</p>
+</li>
+<li><p>EnumSet静态工厂最大限度地减少创建枚举集合的成本</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">of</span><span class="params">(E first, E... rest)</span> </span>&#123;</span><br><span class="line">        EnumSet&lt;E&gt; result = noneOf(first.getDeclaringClass());</span><br><span class="line">        result.add(first);</span><br><span class="line">        <span class="keyword">for</span> (E e : rest)</span><br><span class="line">            result.add(e);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Arrays.toString(int[] args)可以打印数组，而不是可变参数</li>
+</ul>
+       <!-- 慎用可变参数 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/21/优先使用Lamdba，而不是匿名内部类/" target="_blank" title="优先使用Lamdba,而不是匿名内部类"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/21/优先使用Lamdba，而不是匿名内部类/" target="_self" title="优先使用Lamdba,而不是匿名内部类">优先使用Lamdba,而不是匿名内部类</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0121</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+             <em>·</em><div class="fa fa-code" aria-hidden="true" style="font-size:22px;color:blue;"></div>
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <ul>
+<li><p>Lambda没有文档和名字，如果不能方法体太长或者不能自解释的话，那么就不要放到lamdba中。</p>
+</li>
+<li><p>Lambda不能使用this访问自身。this在Lambda是访问的外部类。如果要在方法体中访问自身的话，那么就不能使用Lambda</p>
+</li>
+<li><p>不要在创建函数对象的时候使用匿名内部类，除非创建的对象不是函数式接口。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Operation &#123;</span><br><span class="line">    PLUS (<span class="string">"+"</span>, (x, y) -&gt; x + y),</span><br><span class="line">    MINUS (<span class="string">"-"</span>, (x, y) -&gt; x - y),</span><br><span class="line">    TIMES (<span class="string">"*"</span>, (x, y) -&gt; x * y),</span><br><span class="line">    DIVIDE(<span class="string">"/"</span>, (x, y) -&gt; x / y);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String symbol;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> DoubleBinaryOperator op;</span><br><span class="line">    Operation(String symbol, DoubleBinaryOperator op) &#123;</span><br><span class="line">        <span class="keyword">this</span>.symbol = symbol;</span><br><span class="line">        <span class="keyword">this</span>.op = op;</span><br><span class="line">    &#125;   </span><br><span class="line">    <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> symbol; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">apply</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> op.applyAsDouble(x, y);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+       <!-- 优先使用Lamdba,而不是匿名内部类 -->
+    </div>
+
+</article>
+
+
+
+    
+    
+<article class="post ">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a href="/2018/01/21/Java_effective_第三版脑图/" target="_blank" title="Java_effective_第三版脑图"
+           style="background-image:url(/images/zheng.png)"></a>
+    </div>
+    
+    <div class="post-header">
+          
+                    <a class="post-title" href="/2018/01/21/Java_effective_第三版脑图/" target="_self" title="Java_effective_第三版脑图">Java_effective_第三版脑图</a>
+            
+        <div class="post-meta">
+            <a href="http://xiaohuozi51.coding.me/" target="_blank">
+              <i class="fa fa-male" aria-hidden="true"></i><strong>正</strong>
+            </a>
+
+            <span class=''><em>·</em> <i class="fa fa-clock-o"></i>2018/0121</span>
+
+            
+            <a href="/categories" target="_self"><i class="fa fa-folder-open-o"></i></a>
+            
+                <em>·</em>
+                <a href="/categories/java/" target="_self">java</a>
+            
+
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/Effective-Java/" target="_self">Effective_Java</a>
+            
+             
+
+            
+
+            
+
+
+
+        </div>
+    </div>
+    <div class="post-desc">
+             
+             
+        
+         
+
+
+     <h4 id="整理的Java-effective-第三版脑图-，慢慢看，争取掌握最新的东西。"><a href="#整理的Java-effective-第三版脑图-，慢慢看，争取掌握最新的东西。" class="headerlink" title="整理的Java_effective_第三版脑图 ，慢慢看，争取掌握最新的东西。"></a>整理的Java_effective_第三版脑图 ，慢慢看，争取掌握最新的东西。</h4><iframe src="https://www.processon.com/embed/mind/5a635af1e4b0a447b9b2b4bc" width="100%" height="900px" frameborder="0" allowfullscreen></iframe>
+       <!-- Java_effective_第三版脑图 -->
+    </div>
+
+</article>
+
+
+
+    
+</div>
+<!-- 分页开始 -->
+
+<div id="btn-pager">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/tags/Effective-Java/page/2/">2</a><a class="extend next" rel="next" href="/tags/Effective-Java/page/2/">Next</a>
+</div>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+    	
+    		<p style='color:red;font-weight:bold;'>本站内容仅作为作者个人兴趣与观点，不代表所在公司及团队的观点和决策。若有不恰当之处，请联系站长.</p>
+        
+        <p>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            , Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+        </p>
+        
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://cdn.bootcss.com/github-repo-widget/e23d85ab8f/jquery.githubRepoWidget.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '11/20/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            wxMpImg: '/images/weixin-mp.png',
+            donateImg: '/images/donate-qr.png',
+        });
+    });
+</script>
+</body>
+</html>
